@@ -1,0 +1,96 @@
+#---------------------------------------------------------------------------------------------------------------------------#
+# BACKEND:
+#---------------------------------------------------------------------------------------------------------------------------#
+#DEFINICIÓN DEL DEPLOYMENT:
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kubernetes.io/change-cause: "Initial deployment"
+  name: backend_deploy
+  labels:
+    app: backend
+#DEFINICIÓN DEL REPLICA SET:
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backend
+  #DEFINICIÓN DEL POD:
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: nodejs
+        image: nodejs:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
+---
+#DEFINICIÓN DEL SERVICIO:
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend_svc
+  labels:
+    app: backend
+spec:
+  type: ClusterIP #El servidor backend no se expondrá fuera del cluster en este caso.
+  selector:
+    app: backend
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 3000
+#---------------------------------------------------------------------------------------------------------------------------#
+
+
+#---------------------------------------------------------------------------------------------------------------------------#
+# FRONTEND:
+#---------------------------------------------------------------------------------------------------------------------------#
+#DEFINICIÓN DEL DEPLOYMENT:
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kubernetes.io/change-cause: "Initial deployment"
+  name: frontend_deploy
+  labels:
+    app: frontend
+#DEFINICIÓN DEL REPLICA SET:
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend
+  #DEFINICIÓN DEL POD:
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:apline
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
+---
+#DEFINICIÓN DEL SERVICIO:
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend_svc
+  labels:
+    app: frontend
+spec:
+  type: NodePort #El servidor Frontend si se expondrá fuera del cluster.
+  selector:
+    app: frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+#---------------------------------------------------------------------------------------------------------------------------#
