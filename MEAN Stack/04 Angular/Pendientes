@@ -1,8 +1,0 @@
-Slice para paginación
-
-@Input Decorator
-@Output Decorator
-
-route.snapshot
-
-location.back()
