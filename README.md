@@ -12,21 +12,21 @@ Este repositorio posee **[snippets](https://es.wikipedia.org/wiki/Snippet)** de 
 
 ##### Desarrollo
 
-* Git
-* Python
-* Rust
-* MEAN Stack | `Javascript` `NodeJS` `TypeScript` `Angular` 
-* LAMP Stack | `HTML` `CSS` `HTML5` `Javascript` `jQuery` `PHP` | **Deprecado**
+* [**Git**](https://github.com/cpifano/snippets/tree/master/Git)
+* [**Python**](https://github.com/cpifano/snippets/tree/master/Python/01%20Introducci%C3%B3n%20Python%203) & [**Django Python**](https://github.com/cpifano/snippets/tree/master/Python/02%20Django)
+* [**Rust**](https://github.com/cpifano/snippets/tree/master/Rust)
+* [**MEAN Stack**](https://github.com/cpifano/snippets/tree/master/MEAN%20Stack) | `Javascript` `NodeJS` `TypeScript` `Angular` 
+* [**LAMP Stack**](https://github.com/cpifano/snippets/tree/master/LAMP%20Stack) | `HTML` `CSS` `HTML5` `Javascript` `jQuery` `PHP` | **Deprecado**
 
 
 
 ##### Sistemas
 
-* Docker
-* Kubernetes
+* [**Docker**](https://github.com/cpifano/snippets/tree/master/Docker)
+* [**Kubernetes**](https://github.com/cpifano/snippets/tree/master/Kubernetes)
 
 
 
 ##### Bases de datos
 
-* MongoDB
+* [**MongoDB**](https://github.com/cpifano/snippets/tree/master/MongoDB)
