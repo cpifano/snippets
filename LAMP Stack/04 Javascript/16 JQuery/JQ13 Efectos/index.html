@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<title>JQ13 Efectos</title>
+		
+		<!--REFERENCIAR DOCUMENTOS JS (JQUERY):-------------------------------------------->
+		<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTOS JS:----------------------------------------------------->
+		<script type="text/javascript" src="js/efectos.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAMOS LA HOJA DE ESTILOS:------------------------------------------- -->
+		<link rel="stylesheet" href="css/estilo.css" type="text/css" />
+		<!-- --------------------------------------------------------------------------- -->
+		
+	</head>
+	<body>
+		<h1>Efectos de jQuery</h1>
+		<table>
+			<tr><!--Fila 01-->
+				<td><!--Columna 01-->
+					<input type="button" id="IDbtnShowHide" value="Show & Hide" />				
+				</td>
+				
+				<td><!--Columna 02-->
+					<input type="button" id="IDbtnFade" value="FadeIn & FadeOut" />
+				</td>
+				
+				<td><!--Columna 03-->
+					<input type="button" id="IDbtnSlide" value="SlideUp & SlideDown" />
+				</td>
+			</tr>
+			
+			<tr><!--Fila 02-->
+				<td><!--Columna 01-->
+					<div id="IDdivShowHide">Show & Hide</div>
+				</td>
+				
+				<td><!--Columna 02-->
+					<div id="IDdivFade">FadeIn & FadeOut</div>
+				</td>
+				
+				<td><!--Columna 03-->
+					<div id="IDdivSlide">SlideUp & SlideDown</div>
+				</td>
+			</tr>
+		</table>
+		
+		<br/><br/><br/>
+		
+		<h1>Efectos de jQuery (Con Toggle incorporado)</h1>
+		<table>
+			<tr><!--Fila 01-->
+				<td><!--Columna 01-->
+					<input type="button" id="IDbtnFadeToggle" value="FadeIn & FadeOut (Toggle)" />
+				</td>
+				
+				<td><!--Columna 02-->
+					<input type="button" id="IDbtnSlideToggle" value="SlideUp & SlideDown (Toggle)" />
+				</td>
+			</tr>
+			
+			<tr><!--Fila 02-->
+				<td><!--Columna 01-->
+					<div id="IDdivFadeToggle">FadeIn & FadeOut (Toggle)</div>
+				</td>
+				
+				<td><!--Columna 02-->
+					<div id="IDdivSlideToggle">SlideUp & SlideDown (Toggle)</div>
+				</td>
+			</tr>
+		</table>
+		
+		<br/><br/><br/>
+		
+		<h1>Ejecutar una funcion al finalizar un efecto:</h1>
+		<table>
+			<tr><!--Fila 01-->
+				<td><!--Columna 01-->
+					<input type="button" id="IDbtnFuncion" value="FadeIn & FadeOut (Toggle) + Funcion" />
+				</td>
+			</tr>
+			
+			<tr><!--Fila 02-->
+				<td><!--Columna 01-->
+					<div id="IDdivFuncion">FadeIn & FadeOut (Toggle) + Funcion</div>
+				</td>
+			</tr>
+		</table>
+		
+		
+	</body>
+</html>

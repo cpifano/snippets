@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<title>CSS Cheat Sheet</title>
+		
+		<!--REFERENCIAMOS LA HOJA DE ESTILOS:-->
+		<link rel="stylesheet" href="css/estilo.css" type="text/css" />
+		
+		<!--ASOCIAR FAVICON:-->
+		<link rel="shortcut icon" href="icons/favicon.ico" />
+	</head>
+		
+	<body>
+		
+		<!--CABECERA:---------------------------------------------------------------------->
+		<div class="Cabecera">
+			<header>
+				<img class="Cabecera" src="images/Head.png">
+			</header>
+		</div>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		
+		<!--CONTENIDO PRINCIPAL:----------------------------------------------------------->
+		<div class="Contenido">
+	
+			<!--IZQUIERDA:--########################################################################################################################### -->
+			<div class="Columna">
+				<!--FUENTES:--------------------------------------------------------------------------------------------------------------------------- -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="2">FUENTES</th>
+					</tr>
+
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">font</td>
+						<td>"Nombre-de-Fuente"</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 2:-->
+						<td class="Primera">font-family</td>
+						<td>Familia-de-Fuente | "Familia01, Familia02, etc"</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td class="Primera">font-size</td>
+						<td>xx-small | x-small | small | medium | large | x-large | xx-large | smaller | larger | length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 4:-->
+						<td class="Primera">font-style</td>
+						<td>normal | italic | oblique</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 5:-->
+						<td class="Primera">font-variant</td>
+						<td>normal | small-caps</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 6:-->
+						<td class="Primera">font-weight</td>
+						<td>normal | bold | bolder | lighter | 100 a 900</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 7:-->
+						<td class="Ejemplo" colspan="3">• Ejemplo:<div class="Ejemplo">
+p{
+	font-family:"Arial, Sans-Serif";
+	font-size:12px;
+	font-weight:bold;
+	font-style:italic;
+}
+						</div></td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+				
+				<br/>
+				
+				<!--TEXTOS:------------------------------------------------------------------------------------------------------------------------------->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="3">TEXTOS</th>
+					</tr>
+
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">text-align</td>
+						<td colspan="2">left | center | right | justify</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 2:-->
+						<td class="Primera">text-decoration</td>
+						<td colspan="2">overline | line-through | underline | blink</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td class="Primera">text-indent</td>
+						<td colspan="2">length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 4:-->
+						<td class="Primera">text-justify</td>
+						<td colspan="2">auto | inter-word | inter-ideograph | inter-cluster | distribute | kashida | none</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 5:-->
+						<td class="Primera">text-overflow</td>
+						<td colspan="2">clip | ellipsis | string</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 6:-->
+						<td class="Primera">text-shadow</td>
+						<td colspan="2">h-shadow v-shadow blur color</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 7:-->
+						<td rowspan="4"></td>
+						<td class="Incluido">h-shadow</td>
+						<td class="Incluido">length (px, pt, cm, em)</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 8:-->
+						<td class="Incluido">v-shadow</td>
+						<td class="Incluido">length (px, pt, cm, em)</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 9:-->
+						<td class="Incluido">blur</td>
+						<td class="Incluido">length (px, pt, cm, em)</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 10:-->
+						<td class="Incluido">color</td>
+						<td class="Incluido">Nombre-de-colores-basicos | #Hexadecimal | rgb(0 a 255,0 a 255,0 a 255)</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 11:-->
+						<td class="Primera">text-transform</td>
+						<td colspan="2">none | capitalize | uppercase | lowercase</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 12:-->
+						<td class="Ejemplo" colspan="3">• Ejemplo:<div class="Ejemplo">
+p, h1, h2{
+	text-align:center;
+	text-decoration:underline;
+	text-indent:10px;
+	text-shadow:2px 1px 2px #101010;
+	text-transform:uppercase;
+}
+						</div></td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+				
+				<br/>
+				
+				<!--DIRECCIONES Y ESPACIADOS:---------------------------------------------------------------------------------------------------------- -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="2">DIRECCIONES Y ESPACIADOS</th>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">white-space</td>
+						<td>normal | pre | nowrap | pre-wrap | pre-line</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 2:-->
+						<td class="Primera">letter-spacing</td>
+						<td>normal | length (px, pt, cm, em)</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td class="Primera">word-spacing</td>
+						<td>normal | length (px, pt, cm, em)</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 4:-->
+						<td class="Primera">line-height</td>
+						<td>normal | number | length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 5:-->
+						<td class="Primera">direction</td>
+						<td>ltr | rtl</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 6:-->
+						<td class="Primera">vertical-align</td>
+						<td>length (px, pt, cm, em) | percent "%" | baseline | sub | super | top | text-top | middle | bottom | text-bottom</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 7:-->
+						<td class="Ejemplo" colspan="3">• Ejemplo:<div class="Ejemplo">
+p, h1, h2{
+	white-space:pre;
+	word-spacing:normal;
+	direction:rtl;
+	vertical-align:middle;
+}
+						</div></td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+				
+				<br/>
+				
+				<!--COLORES Y FONDOS:------------------------------------------------------------------------------------------------------------------ -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="3">COLORES Y FONDOS</th>
+					</tr>
+
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">color</td>
+						<td colspan="2">Nombre-de-colores-basicos | #Hexadecimal | rgb(0 a 255,0 a 255,0 a 255)</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 2:-->
+						<td class="Primera">background</td>
+						<td colspan="2">color position size repeat origin clip attachment image</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td rowspan="8"></td>
+						<td class="Incluido">background-color</td>
+						<td class="Incluido">Nombre-de-colores-basicos | #Hexadecimal | rgb(0 a 255,0 a 255,0 a 255) | transparent</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 4:-->
+						<td class="Incluido">background-position</td>
+						<td class="Incluido">length (Xpx Ypx) | percent (X% Y%) | left top | left center | left bottom | right top | right center | right bottom | center top | center center | center bottom</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 5:-->
+						<td class="Incluido">background-size</td>
+						<td class="Incluido">length (px, pt, cm, em) | percent "%" | cover | contain</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 6:-->
+						<td class="Incluido">background-repeat</td>
+						<td class="Incluido">repeat | repeat-x | repeat-y | no-repeat</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 7:-->
+						<td class="Incluido">background-origin</td>
+						<td class="Incluido">padding-box | border-box | content-box</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 8:-->
+						<td class="Incluido">background-clip</td>
+						<td class="Incluido">padding-box | border-box | content-box</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 9:-->
+						<td class="Incluido">background-attachment</td>
+						<td class="Incluido">scroll | fixed</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 10:-->
+						<td class="Incluido">background-image</td>
+						<td class="Incluido">url('URL') | none</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 11:-->
+						<td class="Primera">opacity</td>
+						<td colspan="2">0.0 a 1.0</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 12:-->
+						<td class="Ejemplo" colspan="3">• Ejemplo:<div class="Ejemplo">
+body{
+	background-color:#D0E4FE;
+	background-image:url('images/Background.jpg');
+	color:black;
+}
+						</div></td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+				
+				<br/>
+				
+				<!--LISTAS - VIÑETAS:------------------------------------------------------------------------------------------------------------------ -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="3">LISTAS - VIÑETAS</th>
+					</tr>
+
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">list-style</td>
+						<td colspan="2">type position image</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 2:-->
+						<td rowspan="3"></td>
+						<td class="Incluido">list-style-type</td>
+						<td class="Incluido">armenian | circle | cjk-ideographic | decimal | decimal-leading-zero | disc | georgian | hebrew | hiragana | hiragana-iroha | katakana | katakana-iroha | lower-alpha | lower-greek | lower-latin | lower-roman | none | square | upper-alpha | upper-latin | upper-roman</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td class="Incluido">list-style-position</td>
+						<td class="Incluido">inside | outside</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 4:-->
+						<td class="Incluido">list-style-image</td>
+						<td class="Incluido">url('URL') | none</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 5:-->
+						<td class="Ejemplo" colspan="3">• Ejemplo:<div class="Ejemplo">
+ul{
+	list-style-type:disc;
+	list-style-position:inside;
+}
+						</div></td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+				
+				<br/>
+				
+				<!--COLUMNAS:-------------------------------------------------------------------------------------------------------------------------- -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="3">COLUMNAS</th>
+					</tr>
+
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">* column</td>
+						<td colspan="2">width count</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 2:-->
+						<td rowspan="2"></td>
+						<td class="Incluido">* column-width</td>
+						<td class="Incluido">length (px, pt, cm, em) | auto</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td class="Incluido">* column-count</td>
+						<td class="Incluido">numbers | auto</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 4:-->
+						<td class="Primera">* column-rule</td>
+						<td colspan="2">width style color</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 5:-->
+						<td rowspan="3"></td>
+						<td class="Incluido">* column-rule-width</td>
+						<td class="Incluido">thin | medium | thick | length (px, pt, cm, em)</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 6:-->
+						<td class="Incluido">* column-rule-style</td>
+						<td class="Incluido">none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 7:-->
+						<td class="Incluido">* column-rule-color</td>
+						<td class="Incluido">Nombre-de-colores-basicos | #Hexadecimal | rgb(0 a 255,0 a 255,0 a 255)</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 8:-->
+						<td class="NotaPrimera">*</td>
+						<td class="Nota" colspan="2">Los elementos marcados con el asterísco indican que la sintaxis varía en un prefijo dependiendo del navegador utilizado.</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 9:-->
+						<td class="Ejemplo" colspan="3">• Ejemplo:<div class="Ejemplo">
+div{
+	column-width:100px;
+	column-count:3;
+	column-rule-width:1px;
+	column-rule-style:dotted;
+	column-rule-color:#000000;
+}
+						</div></td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+				
+				<br/>
+				
+				<!--TRANSICIONES:---------------------------------------------------------------------------------------------------------------------- -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="3">TRANSICIONES</th>
+					</tr>
+
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">* transition</td>
+						<td colspan="2">css-property duration timing-function delay</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 2:-->
+						<td rowspan="4"></td>
+						<td class="Incluido">* transition-property</td>
+						<td class="Incluido">none | all | css-property</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td class="Incluido">* transition-duration</td>
+						<td class="Incluido">time "s"</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 4:-->
+						<td class="Incluido">* transition-timing-function</td>
+						<td class="Incluido">linear | ease | ease-in | ease-out | ease-in-out | cubic-bezier(n,n,n,n)</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 5:-->
+						<td class="Incluido">* transition-delay</td>
+						<td class="Incluido">time "s"</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 6:-->
+						<td class="NotaPrimera">*</td>
+						<td class="Nota" colspan="2">Los elementos marcados con el asterísco indican que la sintaxis varía en un prefijo dependiendo del navegador utilizado.</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 7:-->
+						<td class="Ejemplo" colspan="3">• Ejemplo:<div class="Ejemplo">
+div{
+	width:100px;
+	height:100px;
+	background:#101010;
+	opacity:0.2;
+	transition-property: width, opacity;
+	transition-duration: 2s;
+	transition-timing-function:linear;
+	transition-delay:1s;
+
+}
+div:hover{
+	width:300px;
+	opacity:0.8;
+}
+						</div></td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+				
+				<br/>
+				
+				<!--VISIBILIDAD, RECORTAR Y DESBORDAMIENTO:-------------------------------------------------------------------------------------------- -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="2">VISIBILIDAD, RECORTAR Y DESBORDAMIENTO</th>
+					</tr>
+
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">visibility</td>
+						<td>visible | hidden | collapse</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 2:-->
+						<td class="Primera">display</td>
+						<td>none | block | inline | inline-block | inline-table | list-item | table | table-caption | table-cell | table-column | table-column-group | table-footer-group | table-header-group | table-row | table-row-group</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td class="Primera">clip</td>
+						<td>rect (top "px", right "px", bottom "px", left "px") | auto</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 4:-->
+						<td class="Primera">overflow</td>
+						<td>visible | hidden | scroll | auto</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 5:-->
+						<td class="Primera">overflow-x</td>
+						<td>visible | hidden | scroll | auto | no-display | no-content</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 6:-->
+						<td class="Primera">overflow-y</td>
+						<td>visible | hidden | scroll | auto | no-display | no-content</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 7:-->
+						<td class="Ejemplo" colspan="3">• Ejemplo:<div class="Ejemplo">
+h1{
+	visibility:hidden;
+}
+
+p.unalinea{
+	display:inline;
+}
+
+img{
+	position:absolute;
+	clip:rect(0px,40px,100px,0px);
+}
+
+div{
+	overflow:auto;
+}
+						</div></td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+				
+				<br/>
+				
+				<!--DEGRADADOS:------------------------------------------------------------------------------------------------------------------------ -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="3">DEGRADADOS</th>
+					</tr>
+
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">background</td>
+						<td colspan="2">* linear-gradient (orientation, color_1 opacity_1, color_2 opacity_2, color_n opacity_n)</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 2:-->
+						<td rowspan="3"></td>
+						<td class="Incluido">orientation</td>
+						<td class="Incluido">top | left | right | bottom</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td class="Incluido">color</td>
+						<td class="Incluido">Nombre-de-colores-basicos | #Hexadecimal | rgb(0 a 255,0 a 255,0 a 255) | transparent</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 4:-->
+						<td class="Incluido">opacity</td>
+						<td class="Incluido">percent "%"</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 6:-->
+						<td class="NotaPrimera">*</td>
+						<td class="Nota" colspan="2">Los elementos marcados con el asterísco indican que la sintaxis varía en un prefijo dependiendo del navegador utilizado.</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 7:-->
+						<td class="Ejemplo" colspan="3">• Ejemplo:<div class="Ejemplo">
+div{
+	/* FF3.6+ */
+	background: -moz-linear-gradient (top, #207CCA 51%, #7DB9E8 100%);
+	
+	/* Chrome10+,Safari5.1+ */
+	background: -webkit-linear-gradient (top, #207CCA 51%, #7DB9E8 100%);
+	
+	/* Opera 11.10+ */
+	background: -o-linear-gradient (top, #207CCA 51%, #7DB9E8 100%);
+	
+	/* IE10+ */
+	background: -ms-linear-gradient (top, #207CCA 51%, #7DB9E8 100%);
+	
+	/* W3C */
+	background: linear-gradient (to bottom, #207CCA 51%, #7DB9E8 100%);
+}
+						</div></td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+				
+				<br/>
+				
+				<!--VARIAS:---------------------------------------------------------------------------------------------------------------------------- -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="2">VARIAS</th>
+					</tr>
+
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">cursor</td>
+						<td>url('URL') |
+							<span style="cursor:auto"> auto |</span>
+							<span style="cursor:crosshair"> crosshair |</span>
+							<span style="cursor:default"> default |</span>
+							<span style="cursor:e-resize"> e-resize |</span>
+							<span style="cursor:help"> help |</span>
+							<span style="cursor:move"> move |</span>
+							<span style="cursor:n-resize"> n-resize |</span>
+							<span style="cursor:ne-resize"> ne-resize |</span>
+							<span style="cursor:nw-resize"> nw-resize |</span>
+							<span style="cursor:pointer"> pointer |</span>
+							<span style="cursor:progress"> progress |</span>
+							<span style="cursor:s-resize"> s-resize |</span>
+							<span style="cursor:se-resize"> se-resize |</span>
+							<span style="cursor:sw-resize"> sw-resize |</span>
+							<span style="cursor:text"> text |</span>
+							<span style="cursor:w-resize"> w-resize |</span>
+							<span style="cursor:wait"> wait</span>
+						</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 2:-->
+						<td class="Primera">caption-side</td>
+						<td>top | bottom</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td class="Primera">clear</td>
+						<td>left | right | both | none</td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+				
+				<br/>
+				
+				<!--PREFIJOS:-------------------------------------------------------------------------------------------------------------------------- -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="3">PREFIJOS (*)</th>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Navegadores"><img class="Navegadores" src="images/browsers/Firefox.png"></td>
+						<td class="NotaPrimera">Mozilla Firefox</td>
+						<td class="Nota">-moz-Propiedad</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 2:-->
+						<td class="Navegadores"><img class="Navegadores" src="images/browsers/Maxthon.png"></td>
+						<td class="NotaPrimera">Maxthon</td>
+						<td class="Nota">-webkit-Propiedad</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td class="Navegadores"><img class="Navegadores" src="images/browsers/Chrome.png"></td>
+						<td class="NotaPrimera">Google Chrome</td>
+						<td class="Nota">-webkit-Propiedad</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 4:-->
+						<td class="Navegadores"><img class="Navegadores" src="images/browsers/Opera.png"></td>
+						<td class="NotaPrimera">Opera</td>
+						<td class="Nota">-o-Propiedad</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 5:-->
+						<td class="Navegadores"><img class="Navegadores" src="images/browsers/Safari.png"></td>
+						<td class="NotaPrimera">Safari</td>
+						<td class="Nota">-webkit-Propiedad</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 6:-->
+						<td class="Navegadores"><img class="Navegadores" src="images/browsers/IE.png"></td>
+						<td class="NotaPrimera">Internet Explorer</td>
+						<td class="Nota">-ms-Propiedad</td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+			</div>
+			<!-- ###################################################################################################################################### -->
+			
+			
+			<!--DERECHA:--############################################################################################################################# -->
+			<div class="Columna">
+				<!--MODELO DE CUADRO:------------------------------------------------------------------------------------------------------------------ -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="3">MODELO DE CUADRO</th>
+					</tr>
+					
+					<tr class="Modelo"><!--Fila 1:-->
+						<td colspan="3">arriba - top</td>
+					</tr>
+					
+					<tr class="Modelo"><!--Fila 2:-->
+						<td>izquierda - left</td>
+						<td><img class="Modelo" src="images/BoxModel.png"></td>
+						<td>derecha - right</td>
+					</tr>
+					
+					<tr class="Modelo"><!--Fila 3:-->
+						<td colspan="3">abajo - bottom</td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+			
+				<br/>
+				
+				<!--TAMAÑOS:--------------------------------------------------------------------------------------------------------------------------- -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="2">TAMAÑOS</th>
+					</tr>
+
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">width</td>
+						<td>auto | length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 2:-->
+						<td class="Primera">height</td>
+						<td>auto | length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td class="Primera">max-width</td>
+						<td>none | length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 4:-->
+						<td class="Primera">max-height</td>
+						<td>none | length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 5:-->
+						<td class="Primera">min-width</td>
+						<td>none | length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 6:-->
+						<td class="Primera">min-height</td>
+						<td>none | length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 7:-->
+						<td class="Ejemplo" colspan="3">• Ejemplo:<div class="Ejemplo">
+div.Cabecera{
+	width:100%;
+	height:20%;
+}
+						</div></td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+				
+				<br/>
+				
+				<!--MARGENES Y RELLENOS:--------------------------------------------------------------------------------------------------------------- -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="3">MARGENES Y RELLENOS</th>
+					</tr>
+
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">margin</td>
+						<td colspan="2">auto | total-length (px, pt, cm, em) | total-percent "%" | top right bottom left</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 2:-->
+						<td rowspan="4"></td>
+						<td class="Incluido">margin-top</td>
+						<td class="Incluido">auto | length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td class="Incluido">margin-right</td>
+						<td class="Incluido">auto | length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 4:-->
+						<td class="Incluido">margin-bottom</td>
+						<td class="Incluido">auto | length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 5:-->
+						<td class="Incluido">margin-left</td>
+						<td class="Incluido">auto | length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 6:-->
+						<td class="Primera">padding</td>
+						<td colspan="2">total-length (px, pt, cm, em) | total-percent "%" | top right bottom left</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 7:-->
+						<td rowspan="4"></td>
+						<td class="Incluido">padding-top</td>
+						<td class="Incluido">length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 8:-->
+						<td class="Incluido">padding-right</td>
+						<td class="Incluido">length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 9:-->
+						<td class="Incluido">padding-bottom</td>
+						<td class="Incluido">length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 10:-->
+						<td class="Incluido">padding-left</td>
+						<td class="Incluido">length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 11:-->
+						<td class="Ejemplo" colspan="3">• Ejemplo:<div class="Ejemplo">
+div{
+	margin:10px;
+	padding:20px 10px 20px 10px;
+}
+						</div></td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+				
+				<br/>
+				
+				<!--BORDES:---------------------------------------------------------------------------------------------------------------------------- -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="3">BORDES</th>
+					</tr>
+
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">border</td>
+						<td colspan="2">width style color</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 2:-->
+						<td rowspan="3"></td>
+						<td class="Incluido">border-width</td>
+						<td class="Incluido">thin | medium | thick | length (px, pt, cm, em)</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td class="Incluido">border-style</td>
+						<td class="Incluido">none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 4:-->
+						<td class="Incluido">border-color</td>
+						<td class="Incluido">Nombre-de-colores-basicos | #Hexadecimal | rgb(0 a 255,0 a 255,0 a 255) | transparent</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 5:-->
+						<td class="Primera">border-ORIENTACION</td>
+						<td colspan="2">width style color</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 6:-->
+						<td rowspan="3">ORIENTACION:<br/>(top, left, right, bottom)</td>
+						<td class="Incluido">border-ORIENTACION-width</td>
+						<td class="Incluido">thin | medium | thick | length (px, pt, cm, em)</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 7:-->
+						<td class="Incluido">border-ORIENTACION-style</td>
+						<td class="Incluido">none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 8:-->
+						<td class="Incluido">border-ORIENTACION-color</td>
+						<td class="Incluido">Nombre-de-colores-basicos | #Hexadecimal | rgb(0 a 255,0 a 255,0 a 255) | transparent</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 9:-->
+						<td class="Primera">border-collapse</td>
+						<td colspan="2">collapse | separate</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 10:-->
+						<td class="Primera">border-spacing</td>
+						<td colspan="2">v-length (px, pt, cm, em) h-length (px, pt, cm, em)</td>
+					</tr>
+
+					<tr class="Impar"><!--Fila 11:-->
+						<td class="Primera">border-radius</td>
+						<td colspan="2">total-length (px, pt, cm, em) | total-percent "%" | top-left top-right bottom-left bottom-right</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 12:-->
+						<td rowspan="4"></td>
+						<td class="Incluido">border-top-left-radius</td>
+						<td class="Incluido">length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 13:-->
+						<td class="Incluido">border-top-right-radius</td>
+						<td class="Incluido">length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 14:-->
+						<td class="Incluido">border-bottom-left-radius</td>
+						<td class="Incluido">length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 15:-->
+						<td class="Incluido">border-bottom-right-radius</td>
+						<td class="Incluido">length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 16:-->
+						<td class="Primera">border-image</td>
+						<td colspan="2">source slice width outset repeat</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 17:-->
+						<td rowspan="5"></td>
+						<td class="Incluido">border-image-source</td>
+						<td class="Incluido">url('URL') | none</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 18:-->
+						<td class="Incluido">border-image-slice</td>
+						<td class="Incluido">fill | numbers | percent "%"</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 19:-->
+						<td class="Incluido">border-image-width</td>
+						<td class="Incluido">numbers | percent "%" | auto</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 20:-->
+						<td class="Incluido">border-image-outset</td>
+						<td class="Incluido">length (px, pt, cm, em) | numbers</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 21:-->
+						<td class="Incluido">border-image-repeat</td>
+						<td class="Incluido">stretch | repeat | round</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 22:-->
+						<td class="Ejemplo" colspan="3">• Ejemplo:<div class="Ejemplo">
+table,div{
+	border-width:2px;
+	border-color:#808080;
+	border-top-style:double;
+	border-right-style:dotted;
+	border-bottom-style:ridge;
+	border-left-style:dashed;
+}
+						</div></td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+				
+				<br/>
+				
+				<!--CAJAS:----------------------------------------------------------------------------------------------------------------------------- -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="2">CAJAS</th>
+					</tr>
+
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">* box-orient</td>
+						<td>display:box;<br/>box-orient: horizontal | vertical | inline-axis | block-axis</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 2:-->
+						<td class="Primera">* box-pack</td>
+						<td>display:box;<br/>box-pack: start | end | center | justify</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td class="Primera">* box-align</td>
+						<td>display:box;<br/>box-align: start | end | center | baseline | stretch</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 4:-->
+						<td class="Primera">* box-flex</td>
+						<td>decimal</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 5:-->
+						<td class="Primera">* box-ordinal-group</td>
+						<td>integer</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 6:-->
+						<td class="Primera">* box-direction</td>
+						<td>display:box;<br/>box-direction: normal | reverse</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 7:-->
+						<td class="Primera">* box-sizing</td>
+						<td>content-box | border-box</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 8:-->
+						<td class="Primera">* box-shadow</td>
+						<td>h-shadow v-shadow blur spread color inset</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 9:-->
+						<td class="NotaPrimera">*</td>
+						<td class="Nota">Los elementos marcados con el asterísco indican que la sintaxis varía en un prefijo dependiendo del navegador utilizado.</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 10:-->
+						<td class="Ejemplo" colspan="3">• Ejemplo:<div class="Ejemplo">
+div{
+	display:box;
+	box-orient:horizontal;
+	box-pack:center;
+	box-align:center;
+	box-shadow: 10px 15px 5px #AAAAAA;
+} 
+						</div></td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+				
+				<br/>
+				
+				<!--POSICIONAMIENTO:------------------------------------------------------------------------------------------------------------------- -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="2">POSICIONAMIENTO</th>
+					</tr>
+
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">position</td>
+						<td>static | absolute | fixed | relative</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 2:-->
+						<td class="Primera">top</td>
+						<td>auto | length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td class="Primera">left</td>
+						<td>auto | length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 4:-->
+						<td class="Primera">right</td>
+						<td>auto | length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 5:-->
+						<td class="Primera">bottom</td>
+						<td>auto | length (px, pt, cm, em) | percent "%"</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 6:-->
+						<td class="Primera">float</td>
+						<td>left | right | none</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 7:-->
+						<td class="Primera">clear</td>
+						<td>left | right | both | none</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 8:-->
+						<td class="Primera">z-index</td>
+						<td>auto | number</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 9:-->
+						<td class="Ejemplo" colspan="3">• Ejemplo:<div class="Ejemplo">
+div.Principal{
+	position:relative;
+	top:2px;
+	float:right;
+	z-index:1;
+}
+						</div></td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+				
+				<br/>
+				
+				<!--TRANSFORMACIONES:------------------------------------------------------------------------------------------------------------------ -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="2">TRANSFORMACIONES</th>
+					</tr>
+
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">* transform</td>
+						<td>none<br/>Matriz: matrix(n,n,n,n,n,n) | matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)<br/>Translación: translate(x,y) | translate3d(x,y,z) | translateX(x) | translateY(y) | translateZ(z)<br/>Escalar: scale(x,y) | scale3d(x,y,z) | scaleX(x) | scaleY(y) | scaleZ(z)<br/>Rotación: rotate(angle "deg") | rotate3d(x,y,z,angle "deg") | rotateX(angle "deg") | rotateY(angle "deg") | rotateZ(angle "deg")<br/>Oblicuidad: skew(x-angle "deg",y-angle "deg") | skewX(angle "deg") | skewY(angle "deg")<br/>Perspectiva: perspective(n)</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 2:-->
+						<td class="Primera">* transform-origin</td>
+						<td>x-axis y-axis z-axis<br/>x-axis: (left | center | right | length (px, pt, cm, em) | percent "%")<br/>y-axis: (top | center | bottom | length (px, pt, cm, em) | percent "%")<br/>z-axis: length (px, pt, cm, em)</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td class="Primera">* transform-style</td>
+						<td>flat | preserve-3d</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 4:-->
+						<td class="NotaPrimera">*</td>
+						<td class="Nota">Los elementos marcados con el asterísco indican que la sintaxis varía en un prefijo dependiendo del navegador utilizado.</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 5:-->
+						<td class="Ejemplo" colspan="3">• Ejemplo:<div class="Ejemplo">
+div{
+	transform: rotate(45deg);
+	transform-origin:10% 20%;
+	transform-style:flat;
+}
+						</div></td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+				
+				<br/>
+				
+				<!--PERSPECTIVAS:---------------------------------------------------------------------------------------------------------------------- -->
+				<table class="Propiedades">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="2">PERSPECTIVAS</th>
+					</tr>
+
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">* perspective</td>
+						<td>number | none</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 2:-->
+						<td class="Primera">* perspective-origin</td>
+						<td>x-axis y-axis<br/>x-axis: (left | center | right | length (px, pt, cm, em) | percent "%")<br/>y-axis: (top | center | bottom | length (px, pt, cm, em) | percent "%")</td>
+					</tr>
+					
+					<tr class="Impar"><!--Fila 3:-->
+						<td class="NotaPrimera">*</td>
+						<td class="Nota">Los elementos marcados con el asterísco indican que la sintaxis varía en un prefijo dependiendo del navegador utilizado.</td>
+					</tr>
+					
+					<tr class="Par"><!--Fila 4:-->
+						<td class="Ejemplo" colspan="3">• Ejemplo:<div class="Ejemplo">
+div{
+	perspective: 200;
+	perspective-origin: 50% 50%;
+}
+						</div></td>
+					</tr>
+				</table>
+				<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+								
+			</div>
+			<!-- ###################################################################################################################################### -->
+			
+		
+		</div>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--ASIDE:------------------------------------------------------------------------->
+		<div class="Aside">
+			<aside>
+				<table class="Aside">
+					<tr><!--Cabecera de tabla:-->
+						<th colspan="2">ACLARACIONES</th>
+					</tr>
+			
+					<tr class="Impar"><!--Fila 1:-->
+						<td class="Primera">inherit</td>
+						<td>El atributo inherit se encuentra presente en todas las propiedades de los elementos CSS. El atributo inherit indica que la propiedad que posea éste atributo heredará las caracteristicas de su elemento padre.</td>
+					</tr>
+				</table>
+			</aside>
+		</div>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--PIE DE PAGINA:----------------------------------------------------------------->
+		<div class="Pie">
+			<footer>
+				CSS Cheat Sheet 2012 - Creado por Camilo Pifano Herrera
+			</footer>
+		</div>
+		<!-- --------------------------------------------------------------------------- -->
+		
+	</body>
+</html>

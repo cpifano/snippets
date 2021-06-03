@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<title>JQ20 Libreria de validacion JQuery</title>
+		
+		<!--REFERENCIAR DOCUMENTOS JS (JQUERY):-------------------------------------------->
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTOS JS (JQUERY VALIDATE):----------------------------------->
+		<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR HOJAS DE ESTILOS CSS:---------------------------------------------->
+		<link type="text/css" href="css/estilo.css" rel="stylesheet" />
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTOS JS:----------------------------------------------------->
+		<script type="text/javascript" src="js/control-validacion.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+				
+	</head>
+	<body>
+		
+		<h2>Validación de datos:</h2>
+		
+		<form id="IDfrmPrincipal" name="frmPrincipal" method="post" action="index.html">
+			<fieldset>
+			
+				<p>Por favor, complete los siguientes campos:</p>
+				<br/>
+				
+				<fieldset class="Incluido">
+					<!--OBLIGATORIO:------------------------------------------------------------ -->
+					<label id="IDlblObligatorio">* Obligatorio (required):</label> 
+					<input type="text" id="IDtxtObligatorio" class="required" name="txtObligatorio" />
+					<!-- ----------------------------------------------------------------------- -->
+					
+					<br/><br/><br/>
+					
+					<!--DIGITOS:---------------------------------------------------------------- -->
+					<label id="IDlblDigitos">Digitos (digits):</label> 
+					<input type="text" id="IDtxtDigitos" class="digits" name="txtDigitos" />
+					<!-- ----------------------------------------------------------------------- -->
+					
+					<br/><br/><br/>
+					
+					<!--LETRAS:----------------------------------------------------------------- -->
+					<label id="IDlblLetras">Letras (lettersonly):</label> 
+					<input type="text" id="IDtxtLetras" class="lettersonly" name="txtLetras" />
+					<!-- ----------------------------------------------------------------------- -->
+					
+					<br/><br/><br/>
+					
+					<!--LETRAS COMPLEJO:-------------------------------------------------------- -->
+					<label id="IDlblLetrasComp">Letras Complejo (specialetters):</label> 
+					<input type="text" id="IDtxtLetrasComp" class="specialetters" name="txtLetrasComp" />
+					<!-- ----------------------------------------------------------------------- -->
+					
+					<br/><br/><br/>
+					
+					<!--LARGO:------------------------------------------------------------------ -->
+					<label id="IDlblLargo">Largo (minlength):</label> 
+					<input type="text" id="IDtxtLargo" name="txtLargo" minlength="3" maxlength="10"/>
+					<!-- ----------------------------------------------------------------------- -->
+				</fieldset>
+				
+				<fieldset class="Incluido">
+					<!--TEXTAREA:--------------------------------------------------------------- -->
+					<label id="IDlblFecha">Fecha (date):</label> 
+					<input type="text" id="IDtxtFecha" class="date" name="txtFecha" />
+					<!-- ----------------------------------------------------------------------- -->
+					
+					<br/><br/><br/>
+					
+					<!--EMAIL:------------------------------------------------------------------ -->
+					<label id="IDlblEmail">Email (email):</label> 
+					<input type="text" id="IDtxtEmail" class="email" name="txtEmail" />
+					<!-- ----------------------------------------------------------------------- -->
+					
+					<br/><br/><br/>
+					
+					<!--URL:-------------------------------------------------------------------- -->
+					<label id="IDlblURL">Dirección URL (url):</label> 
+					<input type="text" id="IDtxtURL" class="url" name="txtURL" />
+					<!-- ----------------------------------------------------------------------- -->
+					
+					<br/><br/><hr/><br/>
+					
+					<!--IDENTICO:--------------------------------------------------------------- -->
+					<label id="IDlblPassword">* Contraseña (required):</label> 
+					<input type="password" id="IDtxtPassword" name="txtPassword" />
+					<br/><br/>
+					<label id="IDlblConfirmacion">* Confirmar contraseña (required + equalTo):</label> 
+					<input type="password" id="IDtxtConfirmacion" name="txtConfirmacion" />
+					<!-- ----------------------------------------------------------------------- -->
+				</fieldset>
+				
+				<br/><br/>
+				
+				<!--VALIDAR:---------------------------------------------------------------- -->
+				<input type="submit" name="sbtValidar" value="Validar" />
+				<!-- ----------------------------------------------------------------------- -->
+					
+			</fieldset>
+		</form>
+		
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<title>04 Posicionamiento</title>
+		
+		<!--REFERENCIAMOS LA HOJA DE ESTILOS:-->
+		<link rel="stylesheet" href="css/estilo.css" type="text/css" />
+	</head>
+		
+	<body>
+		
+		<div>Posicionamiento por DEFECTO 01</div>
+		
+		<div>Posicionamiento por DEFECTO 02</div>
+		
+		<div class="Estatico">
+			Posicionamiento ESTATICO<br/>
+			top:50% left:50%
+			<p>
+				Es el valor predeterminado del atributo y el posicionamiento normal de los elementos en la página.
+				Pero a diferencia de los demás posicionamientos, si se le asignan valores a los atributos de posicionado de elementos con static no tendrá efecto alguno.
+			</p>
+		</div>
+		
+		<div>Posicionamiento por DEFECTO 03</div>
+		
+		<div class="Absoluto01">
+			Posicionamiento ABSOLUTO<br/>
+			top:50% left:50%
+			<p>
+				El valor absolute en el atributo position permite posicionar elementos de manera absoluta, esto es de manera definida por valores de los atributos top, left, bottom y right, que indican la distancia con respecto a un punto.
+				Esto quiere decir que no importa donde este el ultimo elemento insertado ya que el posicionamiento dependera solo de la pantalla y los valores de los atributos.
+			</p>
+		</div>
+		
+		<div class="Absoluto02">Posicionamiento ABSOLUTO<br/>bottom:50px left:50px</div>
+		
+		<div class="Relativo">
+			Posicionamiento RELATIVO<br/>
+			top:2px left:700px
+			<p>
+				Este atributo sirve para posicionar un elemento a partir del elemento anterior, es decir, a los valores de posición se evaluarán a partir de la posicion del cursor. 
+			</p>
+		</div>
+		
+		<div class="FlotanteDer">Posicionamiento FLOTANTE<br/>"Derecha" 01</div>
+		
+		<div class="FlotanteDer">Posicionamiento FLOTANTE<br/>"Derecha" 02</div>
+		
+		<div class="FlotanteIzq">
+			Posicionamiento FLOTANTE<br/>
+			"Izquierda" 01
+			<p>
+				La propiedad float establece el esquema de posicionamiento flotante para un elemento. Cuando existe un elemento flotante, los elementos que se encuentran a continuación del elemento flotante fluyen a lo largo de él, salvo que haya un elemento que tenga establecido la propiedad clear.
+				Las propiedades float y clear se pueden aplicar a cualquier elemento de una página web. 
+			</p>
+		</div>
+		
+		<div class="FlotanteIzq">
+			Posicionamiento FLOTANTE<br/>
+			"Izquierda" 02
+		</div>
+		
+		<div class="Fijo">
+			Posicionamiento FIJO<br/>
+			bottom:2% right:2%
+			<p>
+				Este atributo sirve para posicionar una capa con posicionamiento absoluto, pero su posición final será siempre fija, es decir, aunque se desplace el documento con las barras de desplazamiento del navegador, siempre aparecerá en la misma posición.
+			</p>
+		</div>
+		
+	</body>
+</html>

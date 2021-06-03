@@ -1,0 +1,142 @@
+/*FULL-CALENDAR:--------------------------------------------------------------------*/
+body {
+	margin-top: 40px;
+	text-align: center;
+	font-size: 14px;
+	font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+}
+
+#IDdivCalendario {
+	width: 58%;
+	margin: 0 auto;
+}
+/*----------------------------------------------------------------------------------*/
+
+/*DEMO PAGE CSS JQUERY UI:----------------------------------------------------------*/
+/*Dialogos*/
+.demoHeaders {
+	margin-top: 2em;
+}
+
+#IDlnkDialogo{
+	padding: .4em 1em .4em 20px;
+	text-decoration: none;
+	position: relative;
+}
+
+#IDlnkDialogo span.ui-icon{
+	margin: 0 5px 0 0;
+	position: absolute;
+	left: .2em;
+	top: 50%;
+	margin-top: -8px;
+}
+
+ul#icons{
+	margin: 0;
+	padding: 0;
+}
+
+ul#icons li{
+	margin: 2px;
+	position: relative;
+	padding: 4px 0;
+	cursor: pointer;
+	float: left;
+	list-style: none;
+}
+
+ul#icons span.ui-icon{
+	float: left;
+	margin: 0 4px;
+}
+
+/*Ordenables*/
+#IDOrdenable{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 60%;
+}
+
+#IDOrdenable li{
+	margin: 0 5px 5px 5px;
+	padding: 5px;
+	font-size: 1.2em;
+	height: 1.5em;
+}
+
+#IDOrdenable li span{
+	position: absolute;
+	margin-left: -1.3em;
+}
+
+/*Drag and Drop*/
+/*Afuera*/
+#IDulAfuera{
+	float: left;
+	width: 65%;
+	min-height: 12em;
+}
+
+* html #IDulAfuera{
+	height: 12em;
+}
+
+/* IE6 */
+.ulAfuera.custom-state-active{
+	background: #eee;
+}
+
+.ulAfuera li{
+	float: left;
+	width: 96px;
+	padding: 0.4em;
+	margin: 0 0.4em 0.4em 0;
+	text-align: center;
+}
+
+.ulAfuera li h5{
+	margin: 0 0 0.4em;
+	cursor: move;
+}
+
+.ulAfuera li a{
+	float: right;
+}
+
+.ulAfuera li a.ui-icon-zoomin{
+	float: left;
+}
+
+.ulAfuera li img{
+	width: 100%;
+	cursor: move;
+}
+
+/*Adentro*/
+#IDdivAdentro{
+	float: right;
+	width: 32%;
+	min-height: 18em;
+	padding: 1%;
+}
+
+* html #IDdivAdentro{
+	height: 18em;
+}
+
+/* IE6 */
+#IDdivAdentro h4{
+	line-height: 16px;
+	margin: 0 0 0.4em;
+}
+
+#IDdivAdentro h4 .ui-icon{
+	float: left;
+}
+
+#IDdivAdentro .ulAfuera h5{
+	display: none;
+}
+/*----------------------------------------------------------------------------------*/

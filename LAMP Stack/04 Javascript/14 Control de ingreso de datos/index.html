@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<title>14 Control de ingreso de datos</title>
+	</head>
+	<body>
+	
+		<!--REFERENCIAR DOCUMENTOS JS:----------------------------------------------------->
+		<script type="text/javascript" src="js/libValidacion.js"></script>
+		<script type="text/javascript" src="js/Control_Ingreso.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<h1>Control de ingreso de datos</h1>
+		
+		<form id="IDfrmPrincipal" name="frmPrincipal">
+		
+			<!--LARGO:------------------------------------------------------------------ -->
+			<label id="IDlblTituloLargo">LARGO DEL INGRESO:</label><br/>
+			<input type="text" id="IDtxtLargo" name="txtLargo" maxlength="8" />
+			<label id="IDlblAvisoLargo">Vacío</label>
+			<p id="IDparLeyendaLargo"></p>
+			<!-- ----------------------------------------------------------------------- -->
+			
+			<br/><br/><br/>
+			
+			<!--SOLO NUMEROS:----------------------------------------------------------- -->
+			<label id="IDlblTituloNumeros">SOLO NUMEROS:</label><br/>
+			<input type="text" id="IDtxtNumeros" name="txtNumeros" />
+			<label id="IDlblAvisoNumeros">Vacío</label>
+			<p id="IDparLeyendaNumeros"></p>
+			<!-- ----------------------------------------------------------------------- -->
+			
+			<br/><br/><br/>
+			
+			<!--SOLO LETRAS SIMPLES (SIN ESPACIOS):------------------------------------- -->
+			<label id="IDlblTituloLetrasSimple">SOLO LETRAS SIMPLE:</label><br/>
+			<input type="text" id="IDtxtLetrasSimple" name="txtLetrasSimple" />
+			<label id="IDlblAvisoLetrasSimple">Vacío</label>
+			<p id="IDparLeyendaLetrasSimple"></p>
+			<!-- ----------------------------------------------------------------------- -->
+			
+			<br/><br/><br/>
+			
+			<!--SOLO LETRAS COMPLEJO (CON ESPACIOS):------------------------------------ -->
+			<label id="IDlblTituloLetrasComplejo">SOLO LETRAS COMPLEJO:</label><br/>
+			<input type="text" id="IDtxtLetrasComplejo" name="txtLetrasComplejo" />
+			<label id="IDlblAvisoLetrasComplejo">Vacío</label>
+			<p id="IDparLeyendaLetrasComplejo"></p>
+			<!-- ----------------------------------------------------------------------- -->
+			
+			<br/><br/><br/>
+			
+			<!--CHECK BOX:-------------------------------------------------------------- -->
+			<label id="IDlblTituloCheck">CHECK BOX:</label><br/>
+			<input type="checkbox" id="IDchkCheck01" name="chkCheck" /> <label>Opción 01</label><br/>
+			<input type="checkbox" id="IDchkCheck02" name="chkCheck" /> <label>Opción 02</label><br/>
+			<input type="checkbox" id="IDchkCheck03" name="chkCheck" /> <label>Opción 03</label><br/>
+			<label id="IDlblAvisoCheck">Seleccionar al menos una opción.</label>
+			<p id="IDparLeyendaCheck"></p>
+			<!-- ----------------------------------------------------------------------- -->
+			
+			<br/><br/><br/>
+			
+			<!--RADIO BUTTON:----------------------------------------------------------- -->
+			<label id="IDlblTituloRadio">RADIO BUTTON:</label><br/>
+			<input type="radio" id="IDradRadio01" name="radRadio" /> <label>Opción 01</label><br/>
+			<input type="radio" id="IDradRadio02" name="radRadio" /> <label>Opción 02</label><br/>
+			<input type="radio" id="IDradRadio03" name="radRadio" /> <label>Opción 03</label><br/>
+			<label id="IDlblAvisoRadio">Seleccionar una opción.</label>
+			<p id="IDparLeyendaRadio"></p>
+			<!-- ----------------------------------------------------------------------- -->
+			
+			<br/><br/><br/>
+			
+			<!--COMBO BOX:-------------------------------------------------------------- -->
+			<label id="IDlblTituloCombo">COMBO BOX:</label><br/>	
+			<select name="cmbCombo">
+				<option value="Opcion01" selected>Primer Opcion</option>
+				<option value="Opcion02">Segunda Opcion</option>
+				<option value="Opcion03">Tercer Opcion</option>
+			</select>
+			<label id="IDlblAvisoCombo">Seleccionar una opción.</label>
+			<p id="IDparLeyendaCombo"></p>
+			<!-- ----------------------------------------------------------------------- -->
+			
+			<br/><br/><br/>
+			
+			<!--LIST BOX SELECCION SIMPLE:---------------------------------------------- -->
+			<label id="IDlblTituloListadoSimple">LIST BOX SELECCION SIMPLE:</label><br/>	
+			<select name="lstListadoSimple" size="6">
+				<option value="Opcion01" selected>Primer Opcion</option>
+				<option value="Opcion02">Segunda Opcion</option>
+				<option value="Opcion03">Tercer Opcion</option>
+			</select><br/>
+			<label id="IDlblAvisoListadoSimple">Seleccionar una opción.</label>
+			<p id="IDparLeyendaListadoSimple"></p>
+			<!-- ----------------------------------------------------------------------- -->
+			
+			<br/><br/><br/>
+			
+			<!--LIST BOX SELECCION MULTIPLE:-------------------------------------------- -->
+			<label id="IDlblTituloListadoMultiple">LIST BOX SELECCION MULTIPLE:</label><br/>	
+			<select multiple name="lstListadoMultiple" size="6">
+				<option value="Opcion01" selected>Primer Opcion</option>
+				<option value="Opcion02">Segunda Opcion</option>
+				<option value="Opcion03">Tercer Opcion</option>
+			</select><br/>
+			<label id="IDlblAvisoListadoMultiple">Seleccionar al menos una opción.</label>
+			<p id="IDparLeyendaListadoMultiple"></p>
+			<!-- ----------------------------------------------------------------------- -->
+			
+		</form>
+		
+	</body>
+</html>

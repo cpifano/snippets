@@ -1,0 +1,25 @@
+Números: 48 - 57
+Letras minusculas: 97 - 122
+Letras mayusculas: 65 - 90
+
+Caracteres especiales:
+Retroceso - 8
+Tabulación - 9
+Espacio - 32
+Espacio invisible - 0160
+Arroba @ - 64
+Punto - 46
+Barra - 47
+ñ - 241
+Ñ - 209
+
+á - 225
+Á - 193
+é - 233
+É - 201
+í - 237
+Í - 205
+ó - 243
+Ó - 211
+ú - 250
+Ú - 218

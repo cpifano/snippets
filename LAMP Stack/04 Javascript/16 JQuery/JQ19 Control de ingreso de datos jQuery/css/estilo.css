@@ -1,0 +1,17 @@
+body{
+	font-family:"Trebuchet MS, sans-serif";
+	font-size:12px;
+	margin: 50px;
+}
+
+select{
+	font-family:"Trebuchet MS, sans-serif";
+	font-size:12px;
+}
+
+/*Lineas punteadas*/
+hr{
+	border:#999999 1px dashed;
+	border-style: none none dashed;
+	color:#FFFFFF;
+}

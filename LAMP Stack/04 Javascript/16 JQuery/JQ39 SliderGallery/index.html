@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>JQ39 SliderGallery</title>
+
+		<!--REFERENCIAR DOCUMENTOS JS (JQUERY):-------------------------------------------->
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTOS JS (JQUERY UI):----------------------------------------->
+		<script type="text/javascript" src="js/jquery-ui-1.8.22.custom.min.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTOS JS Y CSS (SLIDER-GALLERY):------------------------------>
+		<script src="js/slider.gallery.js"></script>
+		<link rel="stylesheet" href="css/slider.gallery.style.css" type="text/css" media="screen"/>
+		<!-- --------------------------------------------------------------------------- -->
+		
+    </head>
+    <body>
+		<div id="fp_gallery" class="fp_gallery">
+		
+			<ul id="fp_galleryList" class="fp_galleryList">
+				<li>Paris</li>
+				<li>New York</li>
+			</ul>
+			
+			<div id="fp_thumbContainer">
+				<div id="fp_thumbScroller">
+					<div class="container">
+						<div class="content">
+							<div><a href="#"><img src="images/Albums/Paris/01-min.jpg" alt="images/Albums/Paris/01.jpg" class="thumb" /></a></div>
+						</div>
+						<div class="content">
+							<div><a href="#"><img src="images/Albums/Paris/02-min.jpg" alt="images/Albums/Paris/02.jpg" class="thumb" /></a></div>
+						</div>
+						<div class="content">
+							<div><a href="#"><img src="images/Albums/Paris/03-min.jpg" alt="images/Albums/Paris/03.jpg" class="thumb" /></a></div>
+						</div>
+					</div>
+					
+					<div class="container">
+						<div class="content">
+							<div><a href="#"><img src="images/Albums/NY/01-min.jpg" alt="images/Albums/NY/01.jpg" class="thumb" /></a></div>
+						</div>
+						<div class="content">
+							<div><a href="#"><img src="images/Albums/NY/02-min.jpg" alt="images/Albums/NY/02.jpg" class="thumb" /></a></div>
+						</div>
+						<div class="content">
+							<div><a href="#"><img src="images/Albums/NY/03-min.jpg" alt="images/Albums/NY/03.jpg" class="thumb" /></a></div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+
+			<div id="fp_scrollWrapper" class="fp_scrollWrapper">
+				<span id="fp_prev_thumb" class="fp_prev_thumb"></span>
+				<div id="slider" class="slider"></div>
+				<span id="fp_next_thumb" class="fp_next_thumb"></span>
+			</div>
+
+			<div id="fp_overlay" class="fp_overlay"></div>
+			<div id="fp_loading" class="fp_loading"></div>
+			<div id="fp_next" class="fp_next"></div>
+			<div id="fp_prev" class="fp_prev"></div>
+			<div id="fp_close" class="fp_close">Cerrar</div>
+		</div>
+		
+    </body>
+</html>

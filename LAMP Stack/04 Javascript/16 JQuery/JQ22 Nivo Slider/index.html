@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<title>JQ22 Nivo Slider</title>
+		
+		<!--REFERENCIAR DOCUMENTOS JS (JQUERY):-------------------------------------------->
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR HOJAS DE ESTILOS CSS (NIVO-SLIDER):-------------------------------->
+		<!--Generales:-->
+		<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+		
+		<!--Temas:-->
+		<link rel="stylesheet" href="css/themes/default/default.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/themes/light/light.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/themes/dark/dark.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/themes/bar/bar.css" type="text/css" media="screen" />
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTOS JS (NIVO-SLIDER):--------------------------------------->
+		<script type="text/javascript" src="js/jquery.nivo.slider.min.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTOS JS:----------------------------------------------------->
+		<script src="js/control-slider.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+	</head>
+	<body>
+
+		<div id="IDdivContenedorSlider">
+			<div class="slider-wrapper theme-default">
+				<div id="IDdivSlider" class="nivoSlider">
+					<img src="images/autumn.jpg" data-thumb="images/autumn.jpg" alt="" />
+					<a href="#"><img src="images/cordillera.jpg" data-thumb="images/cordillera.jpg" alt="" title="Esta es una leyenda opcional. 'Nota: esta imagen tiene un enlace.'" /></a>
+					<img src="images/glass.jpg" data-thumb="images/glass.jpg" alt="" />
+					<img src="images/tilicho-lake.jpg" data-thumb="images/tilicho-lake.jpg" alt="" title="#IDdivLeyenda" />
+				</div>
+				<div id="IDdivLeyenda" class="nivo-html-caption">
+					<strong>Esto</strong> es un ejemplo de leyenda con un <a href="#">Enlace</a>. 
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

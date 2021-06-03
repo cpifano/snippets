@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<title>JQ21 Cifrado (Hash)</title>
+		
+		<!--REFERENCIAR DOCUMENTOS JS (JQUERY):-------------------------------------------->
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTOS JS (HASH):---------------------------------------------->
+		<!--MD5-->
+		<script type="text/javascript" src="js/md5-min.js"></script>
+		
+		<!--SHA1-->
+		<script type="text/javascript" src="js/sha1-min.js"></script>
+		
+		<!--SHA2-->
+		<script type="text/javascript" src="js/sha256-min.js"></script>
+		<script type="text/javascript" src="js/sha512-min.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR HOJAS DE ESTILOS CSS:---------------------------------------------->
+		<link type="text/css" href="css/estilo.css" rel="stylesheet" />
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTOS JS:----------------------------------------------------->
+		<script type="text/javascript" src="js/control-cifrado.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+				
+	</head>
+	<body>
+		
+		<h2>Cifrado (Funciones Hash):</h2>
+		
+		<form id="IDfrmPrincipal" name="frmPrincipal" method="post" action="index.html">
+		
+			<!--IDENTICO:--------------------------------------------------------------- -->
+			<label id="IDlblPassword">* Contraseña:</label> 
+			<input type="password" id="IDtxtPassword" />
+			<!-- ----------------------------------------------------------------------- -->
+				
+			<br/><br/>
+			
+			<!--CIFRAR:.---------------------------------------------------------------- -->
+			<input type="button" id="IDbtnCifrar" value="Cifrar" />
+			<!-- ----------------------------------------------------------------------- -->	
+			
+			<br/><br/><br/>
+			
+			<!--RESULTADO CIFRADO:------------------------------------------------------ -->
+			<!--MD5-->
+			<label id="IDlblResultadoMD5">Resultado MD5: </label> 
+			<label id="IDlblMD5">Vacio</label>
+			
+			<br/><br/>
+			
+			<!--SHA1-->
+			<label id="IDlblResultadoSHA1">Resultado SHA1: </label> 
+			<label id="IDlblSHA1">Vacio</label>
+			
+			<br/><br/>
+			
+			<!--SHA2-->
+			<label id="IDlblResultado256">Resultado SHA256: </label> 
+			<label id="IDlblSHA256">Vacio</label>
+			
+			<br/><br/>
+			
+			<label id="IDlblResultado512">Resultado SHA512: </label> 
+			<label id="IDlblSHA512">Vacio</label>
+			<!-- ----------------------------------------------------------------------- -->
+			
+		</form>
+		
+	</body>
+</html>

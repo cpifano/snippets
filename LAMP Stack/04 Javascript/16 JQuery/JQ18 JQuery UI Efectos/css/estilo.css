@@ -1,0 +1,27 @@
+body{
+	font-family:"Trebuchet MS, sans-serif";
+	font-size:62.5%;
+	margin: 50px;
+}
+
+#IDdivContenedor{
+	width: 500px;
+	height: 200px;
+}
+
+#IDdivAnimacion{
+	text-align:center;
+	padding-top:2%;
+	padding-bottom:2%;
+	width: 240px;
+	height: 160px;
+	position: relative;
+	background-color:#DDDDEE;
+}
+
+/*Lineas punteadas*/
+hr{
+	border:#999999 1px dashed;
+	border-style: none none dashed;
+	color:#FFFFFF;
+}

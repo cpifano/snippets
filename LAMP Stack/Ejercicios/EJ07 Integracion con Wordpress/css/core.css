@@ -1,0 +1,100 @@
+/*CLASES UTILES-------------------------------------------------------------------------------------*/
+.clear{
+	clear: both;
+}
+
+.oculto{
+	visibility: hidden;
+	display: none;
+	width: 0px;
+}
+
+.visible{
+	visibility: visible;
+}
+
+.centrar{
+	text-align: center;
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+/*WORDPRESS:-------------------------------------------------------------------------------------*/
+div.ContenedorWP{
+	float: left;
+	width: 100%;
+}
+
+.ContenedorWP img{
+	max-width: 90%;
+}
+
+div.Post{
+	width: 100%;
+}
+
+div.ContenidoPost{
+	width: 100%;
+}
+
+/*Videos*/
+embed, iframe, object {
+    max-width: 100%;
+}
+
+/*Imagenes*/
+img[class*="wp-image-"] {
+	height: auto;
+	max-width: 80%;
+}
+
+.wp-caption {
+	background: #EEEEEE;
+	border: none;
+	text-align: center;
+	font-style: italic;
+	max-width: 80%;
+	padding: 2%;
+}
+
+img.size-full, img.size-large {
+    max-width: 80%;
+    width: auto;
+    height: auto;
+}
+
+img.size-full-medium {
+    max-width: 50%;
+    width: auto;
+    height: auto;
+}
+
+img.size-full-thumbnail {
+    max-width: 25%;
+    width: auto;
+    height: auto;
+}
+
+/*Alineados*/
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.625em;
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.625em;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignjustify{
+	text-align: justify;
+}
+/*-----------------------------------------------------------------------------------------------*/

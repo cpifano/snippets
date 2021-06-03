@@ -1,0 +1,78 @@
+body {
+	margin:0px;
+}
+
+/*Ascemsor*/
+#IDdivAscensor {
+	overflow:hidden;
+}
+
+section{
+	overflow:auto;
+}
+
+/*Mapa de navegacion*/
+#IDulMapa{
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
+}
+
+#IDnavMapa{
+	position: fixed;
+	right:20px;
+	bottom:20px;
+	width: 140px;
+	height:40px;
+	z-index: 999;
+}
+
+#IDnavMapa ul li a{
+	background: #EEEEEE;
+	height:10px;
+	width: 10px;
+	border-radius:2px;
+	position: fixed;
+}
+
+#IDnavMapa .AscensorLinkActive{
+	background: #333333;
+}
+
+#IDnavMapa .AscensorLink:hover{
+	background:#444444;
+}
+
+#IDnavMapa .AscensorLink2, #IDnavMapa  .AscensorLink3{
+	margin-left:30px;
+}
+
+#IDnavMapa .AscensorLink3{
+	margin-top: 30px;
+}
+
+/*Siguiente piso:
+#IDnavMapa .AscensorLink4{
+	margin-left: 60px;
+}
+*/
+
+/*Pisos*/
+.AscensorFloor{
+	font-family:"Arial, Sans-Serif";
+	font-size:18px;
+	color:#EEEEEE;
+}
+
+#AscensorFloor1{
+	background-color:#3366CC;
+}
+
+#AscensorFloor2{
+	background-color:#669933;
+}
+
+#AscensorFloor3{
+	background-color:#666699;
+}

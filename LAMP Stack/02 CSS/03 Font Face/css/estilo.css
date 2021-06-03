@@ -1,0 +1,18 @@
+/*FONT-FACE:-----------------------------------------------------------------------------------------------------------------------------------------*/
+/*Especifca una fuente para ser utilizada dentro del documento. Permite usar una fuente que no se encuentra localmente.*/
+@font-face{
+	font-family: Manuscrito;
+	src: url('../fonts/Saint Andrews Queen.ttf');
+		/*,url('../fonts/Saint Andrews Queen.eot');*/
+}
+
+p{
+	font-family:"Manuscrito";
+	font-size:200px;
+}
+
+/*DOMINIOS:
+font-family: Nombre para la fuente
+src: url('FUENTE')
+*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/

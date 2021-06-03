@@ -1,0 +1,25 @@
+body, html{
+	height: 100%;
+	width: 100%;
+}
+
+/*ROUNDABOUT*/
+.roundabout-holder {
+	list-style: none;
+	padding: 0;
+	margin: 10%;
+	height: 20%;
+	width: 20%;
+}
+
+.roundabout-moveable-item {
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+	background-color: #CCCCCC;
+	border: 1px solid #999999;
+}
+
+.roundabout-in-focus {
+cursor: auto;
+}

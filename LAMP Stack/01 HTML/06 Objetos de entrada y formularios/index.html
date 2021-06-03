@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<title>06 Objetos de entrada y formularios</title>
+	</head>
+	<body>
+	
+	<h1>Tipos de entradas</h1>
+	
+		<!--
+		Form es una etiqueta de HTML que representa un formulario.
+		En este formulario se agregan los diferentes campos de entrada de datos o de confirmación,
+		así como los botones, que como mínimo ha de haber uno, el de envío. También pueden agregarse
+		más botones como el de Restablecer que pone el formulario en blanco.
+		-->
+		
+		<form action="index.html" method="post">
+			<br/><br/><hr/><br/>
+			
+			<label>Boton 01</label>	<input type="button" name="btnBoton01" value="Boton" /><br/>
+			<label>Boton 02</label>	<input type="submit" name="sbtEnviar" value="Enviar" /><br/>
+			<label>Boton 03</label>	<input type="reset" name="rstReiniciar" value="Reiniciar" /><br/>
+			
+			<label>Boton de imagen</label> <input type="image" name="ibtEnviar" border="0" src="images/Animacion.gif" />
+			
+			<br/><br/><hr/><br/>
+			
+			<label>Check Box 01</label>	<input type="checkbox" name="chkCheck01" /><br/>
+			<label>Check Box 02</label>	<input type="checkbox" name="chkCheck02" />
+			
+			<br/><br/><hr/><br/>
+			
+			<label>Radio 01</label>	<input type="radio" name="radRadio" id="radOpcion01" /><br/>
+			<label>Radio 02</label>	<input type="radio" name="radRadio" id="radOpcion02" />
+			
+			<br/><br/><hr/><br/>
+			
+			<label>Text Box</label>	<input type="text" name="txtTexto" /><br/>
+			<label>Pass Box</label>	<input type="password" name="txtPass" />
+			
+			<br/><br/><hr/><br/>
+			
+			<label>Archivo</label>	<input type="file" name="fleArchivo" />
+			
+			<br/><br/><hr/><br/>
+			
+			<label>Combo Box</label>	
+			<select name="cmbCombo">
+				<option value="Opcion01" selected>Primer Opcion</option>
+				<option value="Opcion02">Segunda Opcion</option>
+				<option value="Opcion03">Tercer Opcion</option>
+				<option value="Opcion04">Cuarta Opcion</option>
+			</select>
+			
+			<br/><br/><hr/><br/>
+			
+			<label>List Box - Seleccion simple</label><br/>
+			<select name="lstListadoSimple" size="6">
+				<option value="Opcion01" selected>Primer Opcion</option>
+				<option value="Opcion02">Segunda Opcion</option>
+				<option value="Opcion03">Tercer Opcion</option>
+				<option value="Opcion04">Cuarta Opcion</option>
+			</select>
+			
+			<br/><br/><hr/><br/>
+			
+			<label>List Box - Seleccion multiple</label><br/>
+			<select multiple name="lstListadoMultiple" size="6">
+				<option value="Opcion01" selected>Primer Opcion</option>
+				<option value="Opcion02">Segunda Opcion</option>
+				<option value="Opcion03">Tercer Opcion</option>
+				<option value="Opcion04">Cuarta Opcion</option>
+			</select>
+			
+			<br/><br/><hr/><br/>
+			
+			<textarea name="txtaAreaTexto" rows="6" cols="40">Texto por defecto</textarea>
+			<!--
+			rows="n": Donde n es el número de filas
+			cols="n": Donde n es el número de columnas
+			name="nombre": Asigna un nombre identificador único al campo.
+			wrap="off / soft / hard": Se usa para indicar el texto que el texto se debe justificar (ajustar al ancho de la ventana. Off valor por defecto, no hay ajuste del texto enviándose este tal y como fue escrito. Soft, ajusta el texto a la ventana, además envia este como una cadena continua. Hard, ajusta el texto a la venta enviando el texto como separando la palabra y líneas donde sea necesario
+			readonly:. No deja que el texto escrito en el área de texto pueda ser modificado por las personas que vean la página (sin embargo ese contenido será enviado con el resto del formulario).
+			disable: Desactiva el elemento. Impidiendo que el texto que contiene se ha modificado, y además tampoco es enviado con el formulario. 
+			-->
+			
+			<br/><br/><hr/><br/>
+			
+			<fieldset>
+				<legend>Marco (frame) - Contenedor de objetos:</legend>
+				
+				<p>
+					Loren ipsum.
+				</p>
+				
+			</fieldset>
+			
+			<br/><br/><hr/><br/>
+		</form>
+	
+	</body>
+</html>

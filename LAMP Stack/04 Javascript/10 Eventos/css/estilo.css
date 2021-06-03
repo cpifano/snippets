@@ -1,0 +1,47 @@
+/*CUERPO DE LA PAGINA:--------------------------------------------------------------------------*/
+body{
+	background-color:#D0E4FE;
+	font-family:"Arial, Sans-Serif";
+	font-size:12px;
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+
+/*TABLAS:----------------------------------------------------------------------------------------*/
+table{
+	border-style:solid;
+	border-width:1px;
+	border-color:#909090;
+	background-color:#DDDDDD;
+	border-spacing:0px 0px;
+	padding:8px 8px 8px 8px;
+	width:99%;
+}
+
+/*Cabecera:*/
+th{
+	background-color:#004080;
+	color:#FFFFFF;
+	text-shadow:2px 1px 2px #101010;
+}
+
+/*Columnas:*/
+td{
+	padding:4px 4px 4px 4px;
+}
+
+td.Codigo{
+	font-family: Monospace;
+}
+
+/*Filas:*/
+tr.Par{
+	background-color:#DDDDDD;
+	color:#000000;
+}
+
+tr.Impar{
+	background-color:#EEEEEE;
+	color:#000000;
+}
+/*-----------------------------------------------------------------------------------------------*/

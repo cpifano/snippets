@@ -1,0 +1,46 @@
+@font-face {
+	font-family: Fontawesome;
+	src: url('../fonts/fontawesome.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+	font-family:Fontawesome;
+}
+
+.main > section {
+	max-width: 260px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.main > section h2 {
+	font-weight: 300;
+	color: #ccc;
+}
+
+.main > section button {
+	border: none;
+	background: #47a3da;
+	color: #fff;
+	padding: 1.5em;
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	margin: 10px 0;
+	font-size: 0.8em;
+}
+
+.main > section button:hover {
+	background: #258ecd;
+}
+
+.main > section button.active {
+	background: #0d77b6;
+}
+
+.main > section button.disabled {
+	background: #aaa;
+	pointer-events: none;
+}

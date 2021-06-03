@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<title>10 Eventos</title>
+		
+		<!--REFERENCIAMOS LA HOJA DE ESTILOS:-->
+		<link rel="stylesheet" href="css/estilo.css" type="text/css" />
+		
+		<!--REFERENCIAMOS FUNCIONES DE JAVASCRIPT:-->
+		<script type="text/javascript" src="js/funcion.js"></script>
+		
+	</head>
+	<body onload="Mensaje()" onresize="window.location.href='Pagina02.html'" onunload="AbrirPagina()">
+	
+		<table>
+			<!--Cabecera:-->
+			<tr>
+				<th>EVENTOS</th>
+				<th>DESCRIPCION</th>
+				<th>ELEMENTOS EN LOS QUE ESTA DEFINIDO</th>
+				<th>EJEMPLO</th>
+			</tr>
+			
+			<tr class="Impar"><!--Fila 1:-->
+				<td class="Codigo">onblur</td>
+				<td>Deseleccionar el elemento</td>
+				<td class="Codigo">&lt;button&gt;, &lt;input&gt;, &lt;label&gt;, &lt;select&gt;, &lt;textarea&gt;, &lt;body&gt;</td>
+				<td>
+					<input type="input" name="txtOnBlur" value="Ir hacia página 02" onblur="window.location.href='Pagina02.html'" />
+				</td>
+
+			</tr>
+			
+			<tr class="Par"><!--Fila 2:-->
+				<td class="Codigo">onchange</td>
+				<td>Deseleccionar un elemento que se ha modificado</td>
+				<td class="Codigo">&lt;input&gt;, &lt;select&gt;, &lt;textarea&gt;</td>
+				<td>
+					<input type="input" name="txtOnChange" value="Ir hacia página 02" onchange="window.location.href='Pagina02.html'" />
+				</td>
+			</tr>
+			
+			<tr class="Impar"><!--Fila 3:-->
+				<td class="Codigo">onclick</td>
+				<td>Pulsar y soltar el mouse</td>
+				<td class="Codigo">Todos los elementos</td>
+				<td>
+					<input type="button" name="btnOnClick" value="Ir hacia página 02" onclick="window.location.href='Pagina02.html'" />
+				</td>
+			</tr>
+			
+			<tr class="Par"><!--Fila 4:-->
+				<td class="Codigo">ondblclick</td>
+				<td>Pulsar dos veces seguidas con el mouse</td>
+				<td class="Codigo">Todos los elementos</td>
+				<td>
+					<input type="button" name="btnOnDblClick" value="Ir hacia página 02" ondblclick="window.location.href='Pagina02.html'" />
+				</td>
+			</tr>
+
+			<tr class="Impar"><!--Fila 5:-->
+				<td class="Codigo">onfocus</td>
+				<td>Seleccionar un elemento</td>
+				<td class="Codigo">&lt;button&gt;, &lt;input&gt;, &lt;label&gt;, &lt;select&gt;, &lt;textarea&gt;, &lt;body&gt;</td>
+				<td>
+					<input type="input" name="txtOnFocus" value="Ir hacia página 02" onfocus="window.location.href='Pagina02.html'" />
+				</td>
+			</tr>
+			
+			<tr class="Par"><!--Fila 6:-->
+				<td class="Codigo">onkeydown</td>
+				<td>Pulsar una tecla (sin soltar)</td>
+				<td class="Codigo">Elementos de formulario y &lt;body&gt;</td>
+				<td>
+					<input type="button" name="btnOnKeyDown" value="Ir hacia página 02" onkeydown="window.location.href='Pagina02.html'" />
+				</td>
+			</tr>
+			
+			<tr class="Impar"><!--Fila 7:-->
+				<td class="Codigo">onkeypress</td>
+				<td>Pulsar una tecla</td>
+				<td class="Codigo">Elementos de formulario y &lt;body&gt;</td>
+				<td>
+					<input type="button" name="btnOnKeyPress" value="Ir hacia página 02" onkeypress="window.location.href='Pagina02.html'" />
+				</td>
+			</tr>
+			
+			<tr class="Par"><!--Fila 8:-->
+				<td class="Codigo">onkeyup</td>
+				<td>Soltar una tecla pulsada</td>
+				<td class="Codigo">Elementos de formulario y &lt;body&gt;</td>
+				<td>
+					<input type="button" name="btnOnKeyUp" value="Ir hacia página 02" onkeyup="window.location.href='Pagina02.html'" />
+				</td>
+			</tr>
+			
+			<tr class="Impar"><!--Fila 9:-->
+				<td class="Codigo">onload</td>
+				<td>La página se ha cargado completamente</td>
+				<td class="Codigo">&lt;body&gt;</td>
+				<td>Mensaje al inicio de la página</td>
+			</tr>
+			
+			<tr class="Par"><!--Fila 10:-->
+				<td class="Codigo">onmousedown</td>
+				<td>Pulsar (sin soltar) un botón del mouse</td>
+				<td class="Codigo">Todos los elementos</td>
+				<td>
+					<input type="button" name="btnOnMouseDown" value="Ir hacia página 02" onmousedown="window.location.href='Pagina02.html'" />
+				</td>
+			</tr>
+			
+			<tr class="Impar"><!--Fila 11:-->
+				<td class="Codigo">onmousemove</td>
+				<td>Mover el mouse</td>
+				<td class="Codigo">Todos los elementos</td>
+				<td>
+					<input type="button" name="btnOnMouseMove" value="Ir hacia página 02" onmousemove="window.location.href='Pagina02.html'" />
+				</td>
+			</tr>
+			
+			<tr class="Par"><!--Fila 12:-->
+				<td class="Codigo">onmouseout</td>
+				<td>El mouse "sale" del elemento (pasa por encima de otro elemento)</td>
+				<td class="Codigo">Todos los elementos</td>
+				<td>
+					<input type="button" name="btnOnMouseOut" value="Ir hacia página 02" onmouseout="window.location.href='Pagina02.html'" />
+				</td>
+			</tr>
+			
+			<tr class="Impar"><!--Fila 13:-->
+				<td class="Codigo">onmouseover</td>
+				<td>El mouse "entra" en el elemento (pasa por encima del elemento)</td>
+				<td class="Codigo">Todos los elementos</td>
+				<td>
+					<input type="button" name="btnOnMouseOver" value="Ir hacia página 02" onmouseover="window.location.href='Pagina02.html'" />
+				</td>
+			</tr>
+			
+			<tr class="Par"><!--Fila 14:-->
+				<td class="Codigo">onmouseup</td>
+				<td>Soltar el botón que estaba pulsado en el mouse</td>
+				<td class="Codigo">Todos los elementos</td>
+				<td>
+					<input type="button" name="btnOnMouseUp" value="Ir hacia página 02" onmouseup="window.location.href='Pagina02.html'" />
+				</td>
+			</tr>
+			
+			<tr class="Impar"><!--Fila 15:-->
+				<td class="Codigo">onreset</td>
+				<td>Inicializar el formulario (borrar todos sus datos)</td>
+				<td class="Codigo">&lt;form&gt;</td>
+				<td>...</td>
+			</tr>
+			
+			<tr class="Par"><!--Fila 16:-->
+				<td class="Codigo">onresize</td>
+				<td>Se ha modificado el tamaño de la ventana del navegador</td>
+				<td class="Codigo">&lt;body&gt;</td>
+				<td>Modifique el tamaño de su ventana</td>
+			</tr>
+			
+			<tr class="Impar"><!--Fila 17:-->
+				<td class="Codigo">onselect</td>
+				<td>Seleccionar un texto</td>
+				<td class="Codigo">&lt;input&gt;, &lt;textarea&gt;</td>
+				<td>
+					<input type="input" name="txtOnSelect" value="Ir hacia página 02" onselect="window.location.href='Pagina02.html'" />
+				</td>
+			</tr>
+			
+			<tr class="Par"><!--Fila 18:-->
+				<td class="Codigo">onsubmit</td>
+				<td>Enviar el formulario</td>
+				<td class="Codigo">&lt;form&gt;</td>
+				<td>...</td>
+			</tr>
+			
+			<tr class="Impar"><!--Fila 19:-->
+				<td class="Codigo">onunload</td>
+				<td>Se abandona la página (por ejemplo al cerrar el navegador)</td>
+				<td class="Codigo">&lt;body&gt;</td>
+				<td>Recargue la página</td>
+			</tr>
+		</table>
+		
+	</body>
+</html>

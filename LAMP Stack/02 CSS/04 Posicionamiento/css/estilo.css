@@ -1,0 +1,69 @@
+p{
+	font-family:"Arial, Sans-Serif";
+	font-size:12px;
+}
+
+div{
+	font-family:Monospace;
+	font-size:18px;
+	color:#000000;
+	background-color:#D0D0D0;
+	border-style:solid;
+	border-width:1px;
+	border-color:#000000;
+	opacity:0.5;
+}
+
+div.Estatico{
+	position:static;
+	top:50%;
+	left:50%;
+	width:20%;
+	background-color:pink;
+}
+
+div.Absoluto01{
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:20%;
+	background-color:red;
+}
+
+div.Absoluto02{
+	position:absolute;
+	bottom:50px;
+	left:50px;
+	width:20%;
+	color:#FFFFFF;
+	background-color:black;
+}
+
+div.Relativo{
+	position:relative;
+	top:2px;
+	left:700px;
+	width:20%;
+	background-color:green;
+}
+
+div.FlotanteDer{
+	float:right;
+	width:20%;
+	color:#FFFFFF;
+	background-color:blue;
+}
+
+div.FlotanteIzq{
+	float:left;
+	width:20%;
+	background-color:yellow;
+}
+
+div.Fijo{
+	position:fixed;
+	bottom:2%;
+	right:2%;
+	width:20%;
+	background-color:Gray;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<title>JQ06 Manipulacion de eventos</title>
+		
+		<!--REFERENCIAR DOCUMENTOS JS (JQUERY):-------------------------------------------->
+		<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTOS JS:----------------------------------------------------->
+		<script type="text/javascript" src="js/eventos.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+	</head>
+	<body>
+	
+	<h2>Eventos añadidos con el metodo abreviado:</h2>
+	
+	<input type="button" id="IDBoton01" value="Saludo Simple" />	
+	
+	</br></br></br>
+	
+	<div id="IDDiv">
+		Saludo con nombre
+	</div>
+	
+	</br></br></br>
+	
+	<input type="text" id="IDTexto" />	
+	
+	</br></br></br></br>
+	
+	<hr/>
+	
+	</br></br>
+	
+	<h2>Eventos añadidos con el metodo bind:</h2>
+		
+	<label>Indicar el evento para que el boton ejecute la funcion asociada</label></br>
+	<input type="text" id="IDTextoEvento" />
+	<input type="button" id="IDBotonRecargar" value="Recargar" />
+	<input type="button" id="IDBotonEvento" value="Ejecutar con bind" />
+	
+	</br></br></br></br>
+	
+	<hr/>
+	
+	</br></br>
+	
+	<h2>Multiples eventos añadidos con el metodo bind:</h2>
+		
+	<label>Este boton tiene asignados multiples eventos (click, keydown)</label></br>
+	<input type="button" id="IDBotonMultiple" value="Multiple" />
+
+	</br></br></br></br>
+	
+	<hr/>
+	
+	</br></br>
+	
+	<h2>Eventos añadidos con el metodo de ejecución única:</h2>
+		
+	<label>Este boton se ejecutara solo una vez:</label>
+	<input type="button" id="IDBotonUnaVez" value="Ejecutar" />
+	
+	</br></br></br></br>
+	
+	<hr/>
+	
+	</br></br>
+	
+	<h2>Quitar eventos añadidos con el metodo unbind:</h2>
+		
+	<label>Este boton quitará todos los eventos de la página:</label>
+	<input type="button" id="IDBotonQuitar" value="Quitar Eventos" />
+	
+	</br></br></br></br>
+	
+	<hr/>
+	
+	</br></br>
+	
+	<h2>Eventos añadidos con nombres de espacios:</h2>
+		
+	<label>Este boton mantendra su valor luego de quitar todos los eventos de la página:</label>
+	<input type="button" id="IDBotonDistinto" value="Distinto" />
+	
+	</br></br></br></br>
+	
+	<hr/>
+	
+	</br></br>
+	
+	</body>
+</html>

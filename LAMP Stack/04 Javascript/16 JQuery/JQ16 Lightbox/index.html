@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<title>JQ16 Lightbox</title>
+		
+		<!--REFERENCIAR DOCUMENTOS JS (JQUERY):-------------------------------------------->
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTOS JS Y CSS (LIGHTBOX):------------------------------------>
+		<script src="js/lightbox.js"></script>
+		<link href="css/lightbox.css" rel="stylesheet" />
+		<!-- --------------------------------------------------------------------------- -->
+		
+	</head>
+	<body>
+
+		<a href="images/Prueba_01/Imagen01.jpg" rel="lightbox" title="Primer imagen">
+			<img src = "images/Prueba_01/Imagen01.jpg">	
+		</a>
+		
+		<br/><br/><br/>
+		
+		<label>IMAGENES AGRUPADAS</label><br/>
+		<a href="images/Prueba_02/image-1.jpg" rel="lightbox[Grupo]" title="Primer imagen">Primer Imagen</a><br/>
+		<a href="images/Prueba_02/image-2.jpg" rel="lightbox[Grupo]" title="Segunda imagen">Segunda Imagen</a><br/>
+		<a href="images/Prueba_02/image-3.jpg" rel="lightbox[Grupo]" title="Tercer imagen">Tercer Imagen</a><br/>
+		
+	</body>
+</html>

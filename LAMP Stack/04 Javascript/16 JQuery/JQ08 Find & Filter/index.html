@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="es">
+	<head>
+		<title>JQ08 Find & Filter</title>
+		
+		<!--REFERENCIAR HOJA DE ESTILOS CSS:----------------------------------------------->
+		<link rel="stylesheet" href="css/estilo.css" type="text/css" />
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTOS JS (JQUERY):-------------------------------------------->
+		<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTOS JS:----------------------------------------------------->
+		<script type="text/javascript" src="js/findandfilter.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+	</head>
+	<body>
+
+		<div id="IDFrutas">
+			Frutas
+			<div id="IDManzana">Manzana</div>
+			<div id="IDBanana">Banana</div>
+		</div>
+		
+		<div id="Category">
+			Categoria
+			<div id="IDFrutas">Frutas</div>
+			<div id="IDAnimales">Animales</div>
+		</div>
+		
+		<br/>
+		
+		<input type='button' value="$('div').filter('#IDFrutas')" id='IDbtnFilter'>
+		<input type='button' value="$('div').find('#IDFrutas')" id='IDbtnFind'>
+		
+	</body>
+</html>

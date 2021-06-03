@@ -1,0 +1,23 @@
+div.Automatico{
+	width:200px;
+	height:200px;
+	overflow:auto;
+}
+
+div.Scroll{
+	width:200px;
+	height:200px;
+	overflow:scroll;
+}
+
+div.Oculto{
+	width:200px;
+	height:200px;
+	overflow:hidden;
+}
+
+div.Visible{
+	width:200px;
+	height:200px;
+	overflow:visible;
+}

@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>JQ34 Integracion con Canal YouTube</title>
+		
+		<!--CODIFICACION DE CARACTERES:----------------------------------------------------------------------------------------------- -->
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+		<!-- ------------------------------------------------------------------------------------------------------------------------- -->
+
+		<!--REFERENCIAR DOCUMENTOS JS (JQUERY):-------------------------------------------->
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<!-- --------------------------------------------------------------------------- -->
+		
+		<!--REFERENCIAR DOCUMENTOS JS Y CSS (YOU-MAX):-------------------------------------------------------------------------------- -->
+		<script type="text/javascript" src="js/youmax.js"></script>
+		<link rel="stylesheet" href="css/youmax.css" />
+		<!-- ------------------------------------------------------------------------------------------------------------------------- -->
+
+		<!--CREAR ASOCIACION DE CANAL YOUTUBE:----------------------------------------------------------------------------------------- -->
+		<script type="text/javascript">
+		function goClicked() {
+			$('#youmax').youmax({
+				apiKey:'AIzaSyDEm5wGLsWi2G3WG40re-DAJcWioQSpJ6o',
+				youTubeChannelURL:$('#youTubeChannelUrl').val(),
+				youTubePlaylistURL:$('#youTubePlaylistUrl').val(),
+				youmaxDefaultTab:"UPLOADS",
+				youmaxColumns:5,
+				showVideoInLightbox:true,
+				maxResults:15,
+				
+			});
+		}
+		</script>
+		<!-- ------------------------------------------------------------------------------------------------------------------------- -->	
+	</head>
+	<body>
+		<div id="youmax"></div>
+
+		<script>
+		$('#youmax').youmax({
+			apiKey:'AIzaSyDEm5wGLsWi2G3WG40re-DAJcWioQSpJ6o',
+			youTubeChannelURL:"http://www.youtube.com/user/AlexisDaRosa",
+			youmaxDefaultTab:"UPLOADS",
+			youmaxColumns:5,
+			showVideoInLightbox:true,
+			maxResults:15,
+		});			
+		</script>
+	</body>
+</html>

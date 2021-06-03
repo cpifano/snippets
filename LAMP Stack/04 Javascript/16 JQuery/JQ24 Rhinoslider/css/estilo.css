@@ -1,0 +1,17 @@
+#slider {
+	width:600px;
+	height:250px;
+				
+	/*IE bugfix*/
+	padding:0;
+	margin:0;
+}
+			
+#slider li {
+	list-style:none;
+}
+
+#page {
+	width:600px;
+	margin:50px auto;
+}

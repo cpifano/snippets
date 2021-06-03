@@ -1,0 +1,14 @@
+div{
+	font-family:"Arial, Sans-Serif";
+	font-size:12px;
+	padding:8px;
+	border-color:#AAAAAA;
+	border-width:1px;
+	border-style:solid;
+	background-color:#FFFFFF;
+}
+
+input{
+	font-family:Monospace;
+	font-size:12px;
+}

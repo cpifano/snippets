@@ -1,0 +1,82 @@
+div{
+	font-family:"Arial, Sans-Serif";
+	font-size:16px;
+	text-align:center;
+	color:#202020;
+	text-shadow:2px 1px 1.5px #505050;
+	background-color:#D0D0D0;
+	border-style:dotted;
+	border-width:2px;
+	border-color:#505050;
+	width:100px;
+	height:20px;
+	padding:20px 0px 20px 0px;
+}
+
+div.auto{
+	cursor:auto;
+}
+
+div.crosshair{
+	cursor:crosshair;
+}
+
+div.default{
+	cursor:default;
+}
+
+div.e-resize{
+	cursor:e-resize;
+}
+
+div.help{
+	cursor:help;
+}
+
+div.move{
+	cursor:move;
+}
+
+div.n-resize{
+	cursor:n-resize;
+}
+
+div.ne-resize{
+	cursor:ne-resize;
+}
+
+div.nw-resize{
+	cursor:nw-resize;
+}
+
+div.pointer{
+	cursor:pointer;
+}
+
+div.progress{
+	cursor:progress;
+}
+
+div.s-resize{
+	cursor:s-resize;
+}
+
+div.se-resize{
+	cursor:se-resize;
+}
+
+div.sw-resize{
+	cursor:sw-resize;
+}
+
+div.text{
+	cursor:text;
+}
+
+div.w-resize{
+	cursor:w-resize;
+}
+
+div.wait{
+	cursor:wait;
+}
