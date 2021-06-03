@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de usuarios</title>
+    <!--jQuery-->
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <h1>Ingrese los datos del usuario</h1>
+    <form id="IDfrmUsuarios" action="post_receiver" method="POST">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" />
+        <br/>
+        <label>Apellido:</label>
+        <input type="text" name="apellido" />
+        <br/><br/>
+        <input type="submit" id="IDbtnGuardar" value="Guardar" />
+    </form>
+
+    <div id="IDdivDatos">
+        <!--Dentro de este DIV se cargará el contenido de datos.json por AJAX -->
+    </div>
+
+    <script>
+        //Cargar listado de datos JSON:
+        loadDatos();
+
+        //Validar en evento click:
+        $('#IDbtnGuardar').on('click', function(){
+            const nombre = $('input[name="nombre"]').val();
+            const apellido = $('input[name="apellido"]').val();
+
+            //Validar campos:
+            if(nombre.trim() === '' || apellido.trim() === ''){ //trim quita los espacios en blanco de un string.
+                return false;
+            } else {
+                //Enviar solicitud POST:
+                $('IDfrmUsuarios').submit();
+            }
+        });
+
+        //Solicitud AJAX:
+        function loadDatos(){
+            fetch('/get_datos', {method: 'GET'})
+            .then(res =>{return res.json()})
+            .then(data =>{
+                let html = '';
+                data.usuarios.forEach(element => {
+                    html += '<br/>' + element.nombre + ' ' + element.apellido;    
+                });
+                $('#IDdivDatos').html(html);
+            });
+        }
+    </script>
+</body>
+</html>

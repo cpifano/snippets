@@ -1,0 +1,17 @@
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- SLOT CONTENT PROJECTION: -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- Nos permite seleccionar que elementos queremos mostrar y cuales no de un componente particular. -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+<!--Contenido del archivo de vista de app.component.html-->
+<app-segundo>
+  <div id="IDdivPermitido">
+    Todos los elementos que esten declarados aquí seran visualizados en segundo.componente.<br/>
+  </div>
+  Todo lo que esté por fuera no sera visualizado en el segundo.componente.
+</app-segundo>
+
+<!--Contenido del archivo de vista de segundo.component.html-->
+<ng-content select="IDdivPermitido"></ng-content>
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->

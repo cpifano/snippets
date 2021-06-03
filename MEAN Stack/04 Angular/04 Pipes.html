@@ -1,0 +1,26 @@
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- PIPES:
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- Los Pipes de Angular nos permiten la realización de conversión de tipos y formatos de forma sencilla y resuelta. -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<p>
+  El nombre de la colección de este componente es:<br/>
+  <!--Utilización de pipe para cambio de formato a mayusculas -->
+  {{nombre_coleccion | uppercase}}
+
+  <br/><br/>
+
+  <strong>Datos de mi componente usuario:</strong><br/>
+  ID: {{propiedades.id}} <br/>
+  Nombre: {{propiedades.nombre}} <br/>
+
+  <!--Utilización de pipe para cambio de tipo de dato a fecha -->
+  Fecha Nac.: {{ propiedades.fecha | date }} <br/>
+
+  <!--Se pueden especificar a fondo parametros dentro de un pipe-->
+  Fecha Nac.: {{ propiedades.fecha | date:"dd/MM/yy" }} <br/>
+
+  <!--Los pipes se pueden acumular (stack)-->
+  Fecha Nac.: {{ propiedades.fecha | date | uppercase}}
+</p>
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->

@@ -1,0 +1,14 @@
+{
+  "name": "express_ajax",
+  "version": "1.0.0",
+  "description": "Express POST con guardado en JSON",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Camilo Pifano",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
