@@ -21,6 +21,9 @@ class nombre_app_listView(ListView):
     #Definir que template se utilizará:
     template_name = 'nombre_app/nombre_app_list.html'
 
+    #Definir cuantos elementos listar por página:
+    paginate_by = 50
+
 
 #CREATE VIEW - Vista genérica para formularios tipo create:
 class nombre_app_createView(CreateView):
@@ -72,7 +75,7 @@ from django.conf.urls import url, include
 from apps.nombre_app.views import nombre_app_listView, nombre_app_createView, nombre_app_updateView, nombre_app_deleteView
 
 urlpatterns = [
-    url(r'^listar$', nombre_app_listView.as_view(), name='listar_elementos'),
+    url(r'^listar', nombre_app_listView.as_view(), name='listar_elementos'),
     url(r'^crear$', nombre_app_createView.as_view(), name='crear_elemento'),
     url(r'^editar/(?P<pk>\d+)$', nombre_app_updateView.as_view(), name='editar_elemento'),
     url(r'^eliminar/(?P<pk>\d+)$', nombre_app_deleteView.as_view(), name='eliminar_elemento'),
@@ -113,6 +116,16 @@ urlpatterns = [
             {% endfor %}
         </tbody>
     </table>
+
+    #Paginación:
+    {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}">Atrás</a>
+    {% endif %}
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">Siguiente</a>
+    {% endif %}
+
 {% endblock %}
 
 #---------------------------------------------------------------------------------------------------------------------------#
