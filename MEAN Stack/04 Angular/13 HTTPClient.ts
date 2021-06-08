@@ -3,10 +3,10 @@
 //---------------------------------------------------------------------------------------------------------------------------//
 // Es un servicio que usa Observables de RxJS para leer o escribir de una API REST a través de llamadas HTTP.
 
-//GET: Simplemente devuelven información.
-//POST: A estos endpoints se envía información normalmente para crear o ejecutar acciones sobre recursos en bases de datos.
-//PUT: Se envía información al endpoint y se modifica en base de datos un recurso.
-//DELETE: Para borrar recursos del servidor.
+// GET: Simplemente devuelven información.
+// POST: A estos endpoints se envía información normalmente para crear o ejecutar acciones sobre recursos en bases de datos.
+// PUT: Se envía información al endpoint y se modifica en base de datos un recurso.
+// DELETE: Para borrar recursos del servidor.
 //---------------------------------------------------------------------------------------------------------------------------//
 
 //---------------------------------------------------------------------------------------------------------------------------//
@@ -91,33 +91,30 @@ export class UsuariosComponent implements OnInit {
   ngOnInit() { }
 
   listarUsuarios(){
-    this.objUsuariosService.getUsuarios().suscribe(
-      resultado -> {
-        this.usuarios -> resultado.usuarios;
+    this.objUsuariosService.getUsuarios().suscribe((resultado) => {
+        this.usuarios = resultado.usuarios;
       },
-      error -> {
+      (error) => {
         console.log('Error en el request hacia la API: ' + JSON.stringify(error));
       }
     );
   }
 
   eliminarUsuario(id){
-      this.objUsuariosService.deleteUsuario(id).suscribe(
-        resultado -> {
+      this.objUsuariosService.deleteUsuario(id).suscribe((resultado) => {
           this.listarUsuarios();
         },
-        error -> {
+        (error) => {
           console.log('Error en el request hacia la API: ' + JSON.stringify(error));
         }
       );
   }
 
   crearUsuario(){
-    this.objUsuariosService.createUsuario(this.datos_usuario).suscribe(
-      resultado -> {
+    this.objUsuariosService.createUsuario(this.datos_usuario).suscribe((resultado) => {
         this.listarUsuarios();
       },
-      error -> {
+      (error) => {
         console.log('Error en el request hacia la API: ' + JSON.stringify(error));
       }
     );

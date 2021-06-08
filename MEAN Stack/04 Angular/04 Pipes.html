@@ -6,12 +6,12 @@
 <p>
   El nombre de la colección de este componente es:<br/>
   <!--Utilización de pipe para cambio de formato a mayusculas -->
-  {{nombre_coleccion | uppercase}}
+  {{ nombre_coleccion | uppercase }}
 
   <br/><br/>
 
   <strong>Datos de mi componente usuario:</strong><br/>
-  ID: {{propiedades.id}} <br/>
+  ID: {{ propiedades.id }} <br/>
   Nombre: {{propiedades.nombre}} <br/>
 
   <!--Utilización de pipe para cambio de tipo de dato a fecha -->
@@ -23,4 +23,47 @@
   <!--Los pipes se pueden acumular (stack)-->
   Fecha Nac.: {{ propiedades.fecha | date | uppercase}}
 </p>
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- CREAR PIPES PERSONALIZADOS: -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- Angular nos provee de un decorador y una inteface para poder crean nuestros propios pipes.
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- Creamos un archivo para nuestro pipe, (nombre.pipe.ts): -->
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'nombrePipe'
+})
+
+export class NombrePipe implements PipeTransform {
+  transform(value: string) : boolean {
+
+    //Lógica de mi pipe:
+    if(value == 'Activo'){
+      return true;
+    } else {
+      return false;
+    }
+
+  }
+}
+
+<!-- Uso: -->
+<span>{{ value | nombrePipe }}</span>
+
+<!-- Puedo pasar varios parametros a un Pipe separando por puntos: -->
+<span>{{ value | nombrePipe : otro_parametro : tercer_parametro }}</span>
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- PIPES ASÍNCRONOS: -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- Son de utilidad cuando estamos manejando un observable, (ver Reactive RxJS). -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- El pipe async lo que hace es suscribirse al observable e ir retornando el resultado de forma asíncrona: -->
+<span>{{ nombre_observable | async | json }}</span>
 <!-- ------------------------------------------------------------------------------------------------------------------------ -->

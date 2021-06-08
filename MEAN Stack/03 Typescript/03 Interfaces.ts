@@ -1,7 +1,8 @@
 //---------------------------------------------------------------------------------------------------------------------------//
 // INTERFACES:
 //---------------------------------------------------------------------------------------------------------------------------//
-// Las interfaces son un mecanismo de la programación orientada a objetos que trata de suplir la carencia de herencia
+// Las interfaces establecen una estructura obligatoria que deberá respetarse.
+// Son un mecanismo de la programación orientada a objetos que trata de suplir la carencia de herencia
 // múltiple. La diferencia de las clases que extiendes con respecto a las interfaces es que las interfaces no contienen
 // implementación de sus métodos, por lo que la clase que implementa una interfaz debe escribir el código de todos los
 // métodos que contiene.

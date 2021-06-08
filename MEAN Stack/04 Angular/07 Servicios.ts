@@ -2,12 +2,17 @@
 // SERVICIOS:
 //---------------------------------------------------------------------------------------------------------------------------//
 // Un servicio es un proveedor de datos, que mantiene lógica de acceso a ellos y operativa relacionada.
-// Siempre llegará el momento en el que dos o más componentes tengan que acceder a los mismos datos y hacer operaciones similares con ellos,
-// que podrían obligarnos a repetir código. Para solucionar estas situaciones tenemos a los servicios.
+// Siempre llegará el momento en el que dos o más componentes tengan que acceder a los mismos datos y hacer operaciones
+// similares con ellos, que podrían obligarnos a repetir código. Para solucionar estas situaciones tenemos a los servicios.
+
+// La documentación de Angular indica, un Componente no debe tener la responsabilidad de consultar datos o almacenarlos,
+// esa responsabilidad es para los Servicios.
+// El trabajo de un servicio es el de controlar la información, desde obtenerla, almacenarla, actualizarla y compartirla
+// con los componentes.
 
 // Lo recomendable es que esta capa de acceso a los datos esté separada.
-// Si un día decides cambiar de lugar de los datos, por ejemplo, quitar una API y poner websockets vas a agradecer mucho que tengas una
-// estructura con el acceso a los datos separados.
+// Si un día decides cambiar de lugar de los datos, por ejemplo, quitar una API y poner websockets vas a agradecer mucho que
+// tengas una estructura con el acceso a los datos separados.
 //---------------------------------------------------------------------------------------------------------------------------//
 
 //---------------------------------------------------------------------------------------------------------------------------//

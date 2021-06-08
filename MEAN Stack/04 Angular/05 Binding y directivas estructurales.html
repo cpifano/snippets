@@ -4,8 +4,15 @@
 <!--ngFor-->
 <!-- Listar un elemento definido (me permite repetir una estructura)-->
 <ul>
-  <li *ngFor="let actual of propiedades" >
-    {{actual.nombre}}
+  <li *ngFor="let actual of propiedades; index as clave" >
+    {{ actual.nombre }}
+  </li>
+</ul>
+
+<!--ngFor sobre un Observable (ver Reactive RxJS)-->
+<ul>
+  <li *ngFor="let actual of nombre_servicio.nombre_observable | async" >
+    {{ actual.nombre }}
   </li>
 </ul>
 
@@ -66,6 +73,14 @@
 <!--Template variable:-->
 <!--De esta forma podré pasar rápidamente el contenido de value a la funcion addUsuario-->
 <input type="text" (keyup.enter)="addUsuario(idNombre.value)" #idNombre />
+
+<!--$Event-->
+<!--Angular provee la posibilidad de pasar la variable de event que se ajustará al contexto del evento actual-->
+<button (click)="mostrar_contenido($event)"></button>
+
+<!-- Operador de navegación segura -->
+<!-- El operador ?. solo ejecutará nombre_funcion() si nombre_servicio.nombre_observable es distinto de nulo. -->
+<span>{{ nombre_servicio.nombre_observable?.nombre_funcion() }}</span>
 <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 
 
@@ -77,9 +92,14 @@
 <!--Para poder utilizar ngModule es necesaria la importación manual de el módulo
 "@angular/forms" en el archivo "app.module.ts" -->
 
-<!--Property binding-->
+<!--Property binding (ngModel)-->
 <input [(ngModel)]="propiedades.nombre" type="text" placeholder="Escriba el nombre..." />
-<label>Nombre: {{propiedades.nombre}} </label>
+<label>Nombre: {{ propiedades.nombre }} </label>
+
+<!--Class binding (ngClass)-->
+<!--Nos permite agregar o quitar clases desde un componente -->
+<!-- let array_clases = ['clase_uno', 'clase_dos', clase_tres]; -->
+<button [ngClass]="array_clases">Guardar</button>
 <!-- ------------------------------------------------------------------------------------------------------------------------ -->
 
 
@@ -105,7 +125,27 @@ import { Component, Input } from '@angular/core';
 
 export class DestinoComponent implements OnInit{
   <!--Recibir los datos enviados-->
-  @input() elemento_destino;
+  @Input() elemento_destino;
   ...
 }
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- Event Emitter -->
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!-- Con event emitter podemos crear eventos personalizados.
+<!-- ------------------------------------------------------------------------------------------------------------------------ -->
+<!--Dentro del componente de destino (clase)-->
+import { Component, Output, EventEmitter } from '@angular/core';
+
+export class DestinoComponent implements OnInit{
+  <!--Definir nuestro evento personalizado-->
+  @Output() nombre_evento = new EventEmitter<boolean>();
+  ...
+
+  <!-- Lanzar nuestro evento personalizado -->
+  this.nombre_evento.emit(true);
+}
+
+<app-nombre-componente (nombre_event)="console.log('Hola mundo');"></app-nombre-componente>
 <!-- ------------------------------------------------------------------------------------------------------------------------ -->

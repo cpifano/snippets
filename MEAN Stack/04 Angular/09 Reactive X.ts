@@ -57,7 +57,9 @@ import { Observable,of } from 'rxjs';
 //Función síncrona:
 getDatosSync(){
   //...//
-  obs.suscribe(...);
+  obs.suscribe((data) => {
+    console.log(data);
+  });
   //...//
 }
 
