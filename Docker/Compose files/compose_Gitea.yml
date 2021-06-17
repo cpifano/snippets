@@ -1,22 +1,39 @@
-version: '2'
+version: '3'
 services:
-  gitea:
-    image: gitea/gitea:1.12.4
+  gitea_db:
+    container_name: gitea_db_container
+    image: mysql:5.7
     volumes:
-      - ./gitea_data:/data
-    ports:
-      - "3000:3000"
-      - "22:22"
-    depends_on:
-      - mariadb
-    restart: unless-stopped
-  mariadb:
-    image: mariadb:10
-    restart: unless-stopped
+       - ./gitea_db_data:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=changeme
-      - MYSQL_DATABASE=gitea
-      - MYSQL_USER=gitea
-      - MYSQL_PASSWORD=changeme
+       MYSQL_ROOT_PASSWORD: root_password
+       MYSQL_DATABASE: gitea_database
+       MYSQL_USER: gitea_db_user
+       MYSQL_PASSWORD: gitea_db_password
+       TZ: 'America/Argentina/Buenos_Aires'
+    ports:
+      - "3306:3306"
+    restart: unless-stopped
+    networks:
+      - gitea_net
+
+  gitea_web:
+    container_name: gitea_web_container
+    image: gitea/gitea:1.12.4
+    hostname: 'gitea.opendicom.com'
     volumes:
-      - ./mariadb_data:/var/lib/mysql
+      - ./gitea_web_data:/data
+    environment:
+      TZ: 'America/Argentina/Buenos_Aires'
+    ports:
+      - "8080:3000"
+      - "8443:443"
+      - "822:22"
+    depends_on:
+      - gitea_db
+    restart: unless-stopped
+    networks:
+      - gitea_net
+
+networks:
+  gitea_net:
