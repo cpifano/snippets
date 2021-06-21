@@ -16,6 +16,14 @@
 //---------------------------------------------------------------------------------------------------------------------------//
 
 //---------------------------------------------------------------------------------------------------------------------------//
+// Singleton:
+//---------------------------------------------------------------------------------------------------------------------------//
+// En Angular los servicios son Singleton, lo que significa es que en toda tu aplicación Angular existe un tipo de Servicio,
+// uno y sólo uno. A diferencia de cuando creás clases, que podés crear cuantas quieras, con los Servicios de Angular, sólo
+// una instancia del Servicio puede existir al mismo tiempo en tu aplicación.
+//---------------------------------------------------------------------------------------------------------------------------//
+
+//---------------------------------------------------------------------------------------------------------------------------//
 //Generar un nuevo servicio:
 ng generate service nombre_servicio
 

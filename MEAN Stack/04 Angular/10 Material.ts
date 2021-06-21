@@ -9,18 +9,18 @@
 ng add @angular/material
 
 //Luego debemos importar los elementos que vayamos a utilizar de Angular Material dentro de nuestro app.module.ts:
-import { MatButtonModule } from '@angular/material/button';
+import { MatSliderModule } from '@angular/material/slider';
 
 imports: [
   ...
-  MatButtonModule
+  MatSliderModule
 ],
 //---------------------------------------------------------------------------------------------------------------------------//
 
 
 //---------------------------------------------------------------------------------------------------------------------------//
-//Ejemplo de un botón:
-<button mat-flat-button color="primary"></button>
+//Ejemplo de un slider:
+<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
 //---------------------------------------------------------------------------------------------------------------------------//
 
 
