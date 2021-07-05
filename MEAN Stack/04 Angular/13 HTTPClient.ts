@@ -55,13 +55,13 @@ export class UsuariosService {
     return this.http.get('https://localhost:3000/api/usuarios');
   }
 
-  createUsuario(datos_usuario: Any): Observable<any> {
+  createUsuario(datos_usuario: any): Observable<any> {
     let datos_json = JSON.stringify(datos_usuario);
     let headers = new HttpHeaders().set('Content-Type', 'application/json');
     return this.http.post('https://localhost:3000/api/usuarios', datos_json, {headers: headers});
   }
 
-  editUsuario(id: number, usuario: Any): Observable<any> {
+  editUsuario(id: number, usuario: any): Observable<any> {
     return this.http.post('https://localhost:3000/api/usuarios/' + id, usuario);
   }
 

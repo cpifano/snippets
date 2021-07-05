@@ -6,12 +6,11 @@
 //---------------------------------------------------------------------------------------------------------------------------//
 //Contenido del archivo "app-routing.module.ts":
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 //Es necesario importar el componente que se desee enlazar al ruteo URL:
 import { NombreComponente } from "./nombre_de_componente.component";
 
-//Array de rutas (URL paths):
 const routes: Routes = [
   {path: 'nombre-path', component: NombreComponente}, //Esto nos permite enlazar un path a un componente.
   {path: '', redirectTo: '/nombre-path', pathMatch: 'full'}, //Puedo establecer cual será la paǵina principal con una redirección.

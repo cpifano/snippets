@@ -8,7 +8,7 @@
 //Instalar Angular Material en nuestro proyecto:
 ng add @angular/material
 
-//Luego debemos importar los elementos que vayamos a utilizar de Angular Material dentro de nuestro app.module.ts:
+//Definir dentro de app.module.ts:
 import { MatSliderModule } from '@angular/material/slider';
 
 imports: [
@@ -37,4 +37,28 @@ imports: [
 
 //La forma más sencilla y recomendada de cambiarlo es desde nuestro archivo syle.css:
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+//---------------------------------------------------------------------------------------------------------------------------//
+
+//---------------------------------------------------------------------------------------------------------------------------//
+// FLEX LAYOUT:
+//---------------------------------------------------------------------------------------------------------------------------//
+// Flex layout es una herramienta que nos permitirá llevar a cabo la forma de alinear elementos en el DOM de fomra sencilla.
+//---------------------------------------------------------------------------------------------------------------------------//
+//Instalar Flex Layout:
+npm install @angular/flex-layout –save
+
+//Definir dentro de app.module.ts:
+import { FlexLayoutModule } from '@angular/flex-layout';
+...
+
+@NgModule({
+    ...
+    imports: [ FlexLayoutModule ],
+    ...
+});
+
+//Ejemplo:
+<div fxLayout="row" fxLayoutAlign="end center">
+  <mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+</div>
 //---------------------------------------------------------------------------------------------------------------------------//

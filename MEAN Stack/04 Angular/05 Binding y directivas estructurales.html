@@ -16,7 +16,7 @@
   </li>
 </ul>
 
-<<!--ngIf-->
+<!--ngIf-->
 <!--El div solo se creara si existe el elemento "propiedades"-->
 <div *ngIf="propiedades"></div>
 
@@ -27,6 +27,16 @@
 <ng-template #elseBlock>
   Contenido en caso de FALSE
 </ng-template>
+
+<!--Definiendo cada bloque-->
+<div *ngIf="condicion; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>Contenido en caso de TRUE</ng-template>
+<ng-template #elseBlock>Contenido en caso de FALSE</ng-template>
+
+<!--Null case-->
+<div *ngIf="!myVar">
+  <p>Variable null</p>
+</div>
 
 <!--ngSwitch-->
 <div [ngSwitch]="expresion_a_evaluar">
