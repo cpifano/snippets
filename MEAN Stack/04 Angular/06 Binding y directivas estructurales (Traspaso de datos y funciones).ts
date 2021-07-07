@@ -36,8 +36,8 @@ export class AppModule { }
 //Contenido del archivo "usuarios.component.ts":-------------------------------------//
 import { Component, OnInit } from '@angular/core';
 
-//Importar inteface de modelo:
-import {IUsuarios} from './usuarios.class';
+//Importar NgForm para manejo bidireccional del formulario:
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-usuarios',
@@ -45,21 +45,25 @@ import {IUsuarios} from './usuarios.class';
   styleUrls: ['./usuarios.component.css']
 })
 export class UsuariosComponent implements OnInit {
-  //Utilizar modelo de una interface:
-  public propiedades:IUsuarios;
 
   constructor() { }
 
   //Recibir datos de la vista principal del componente:
-  addUsuario(propiedades):void {
-    console-log("Nombre: " + propiedades.nombre);
-
-    //Asignar datos:
-    this.propiedades = propiedades;
+  onSubmit(form_data: NgForm){
+    console.log(form_data.value);
+    console.log(form_data.valid);
   }
 
   ngOnInit(): void {
   }
 }
+//-----------------------------------------------------------------------------------//
+
+
+//Contenido del archivo usuarios.form.html:------------------------------------------//
+<form #form_data="ngForm" (ngSubmit)="addUsuario(form_data)" novalidate>
+  <input type="text" name="nombre" ngModel required  />
+  <button type="submit">Guardar</button>
+</form>
 //-----------------------------------------------------------------------------------//
 //---------------------------------------------------------------------------------------------------------------------------//

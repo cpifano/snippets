@@ -68,7 +68,7 @@ import { ActivatedRoute } from '@angular/router';
 
   getDatos(): void {
     //Extraer dato enviado como parametro por ruteo:
-    const id=+this.route.snapshot.paramMap.get('id');
+    const id = this.route.snapshot.params['id'];
   }
 //...//
 //---------------------------------------------------------------------------------------------------------------------------//
