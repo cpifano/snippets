@@ -1,29 +1,37 @@
 version: '3'
 services:
-  zabbix:
-    container_name: zabbix-web
+  zabbix_db:
+    container_name: zabbix_db_container
+    image: mysql:5.7
+    volumes:
+      - "./zabbix_db_data/data:/var/lib/mysql"
+      - "./zabbix_db_data/conf/create.sql:/docker-entrypoint-initdb.d/zabbix.sql"
+    ports:
+      - 3306:3306
+    environment:
+      TZ: 'America/Argentina/Buenos_Aires'
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_USER: zabbix_user
+      MYSQL_PASSWORD: zabbix_pass
+      MYSQL_DATABASE: zabbix_db
+    networks:
+      - zabbix_net
+
+  zabbix_web:
+    container_name: zabbix_web_container
     image: zabbix
     build: .
     volumes:
-      - "$PWD/html:/usr/share/zabbix"
+      - ./zabbix_web_data:/usr/share/zabbix
     ports:
-      - "80:80"
-    networks:
-      - net
-  db:
-    container_name: zabbix-db
-    image: mysql:5.7
+      - 80:80
     environment:
-      MYSQL_ROOT_PASSWORD: 123456
-      MYSQL_USER: zabbix
-      MYSQL_PASSWORD: zabbix
-      MYSQL_DATABASE: zabbix
-    volumes:
-      - "$PWD/data:/var/lib/mysql"
-      - "$PWD/conf/create.sql:/docker-entrypoint-initdb.d/zabbix.sql"
-    ports:
-      - "3306:3306"
+      TZ: 'America/Argentina/Buenos_Aires'
+    depends_on:
+      - zabbix_db
+    restart: unless-stopped
     networks:
-      - net
+      - zabbix_net
+
 networks:
-  net:
+  zabbix_net:

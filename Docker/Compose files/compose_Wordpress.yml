@@ -1,37 +1,41 @@
 version: '3'
 
 services:
-  mysql:
-    container_name: mysql_container
+  wordpress_db:
+    container_name: wordpress_db_container
     image: mysql:5.7
     volumes:
-       - $PWD/mysql_data:/var/lib/mysql
-    environment:
-       MYSQL_ROOT_PASSWORD: 123456
-       MYSQL_DATABASE: wp_database
-       MYSQL_USER: wp_db_user
-       MYSQL_PASSWORD: wp_db_password
+      - ./wordpress_db_data:/var/lib/mysql
     ports:
-      - "3306:3306"
+      - 3306:3306
+    environment:
+      TZ: 'America/Argentina/Buenos_Aires'
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: wp_database
+      MYSQL_USER: wp_db_user
+      MYSQL_PASSWORD: wp_db_password
+    restart: unless-stopped
     networks:
-      - wp_net
+      - wordpress_net
 
-  wordpress:
-    container_name: wordpress_container
-    volumes:
-      - $PWD/wordpress_data:/var/www/html
-    depends_on:
-      - mysql
+  wordpress_web:
+    container_name: wordpress_web_container
     image: wordpress
+    volumes:
+      - ./wordpress_web_data:/var/www/html
     ports:
-      - "80:80"
+      - 80:80
     environment:
-      WORDPRESS_DB_HOST: mysql:3306
+      TZ: 'America/Argentina/Buenos_Aires'
+      WORDPRESS_DB_HOST: wordpress_db:3306
       WORDPRESS_DB_NAME: wp_database
       WORDPRESS_DB_USER: wp_db_user
       WORDPRESS_DB_PASSWORD: wp_db_password
+    depends_on:
+      - wordpress_db
+    restart: unless-stopped
     networks:
-      - wp_net
-      
+      - wordpress_net
+
 networks:
-  wp_net:
+  wordpress_net:

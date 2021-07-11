@@ -1,45 +1,44 @@
-version: '3' 
-
+version: '3'
 services:
-  mariadb:
+  nextcloud_db:
+    container_name: nextcloud_db_container
     image: mariadb
-    container_name: mariadb_container
-    ports:
-      - "3307:3307"
-    networks:
-      - nextcloud_network
     volumes:
-      - $PWD/mariadb_data:/mnt/mariadb-data
-      - /etc/localtime:/etc/localtime:ro
+      - ./nextcloud_db_data:/mnt/mariadb-data
+    ports:
+      - 3307:3307
     environment:
-      - MYSQL_ROOT_PASSWORD=secret
-      - MYSQL_USER=nextcloud_db_user
-      - MYSQL_PASSWORD=secret
-      - MYSQL_DATABASE=nextcloud
-      - TRANSACTION_ISOLATION=READ-COMMITTED
+      TZ: 'America/Argentina/Buenos_Aires'
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_USER: nextcloud_db_user
+      MYSQL_PASSWORD: secret
+      MYSQL_DATABASE: nextcloud
+      TRANSACTION_ISOLATION: READ-COMMITTED
     restart: unless-stopped
-  
-  nextcloud:
-    image: nextcloud
-    container_name: nextcloud_nextcloud
     networks:
       - nextcloud_network
+
+  nextcloud_web:
+    container_name: nextcloud_web_container
+    image: nextcloud_db
+    volumes:
+      - ./nextcloud_web_data/nextcloud:/var/www/html
+      - ./nextcloud_web_data/app/data:/mnt/nextcloud-data
+      - ./nextcloud_web_data/app/config:/mnt/nextcloud-config
+      - ./nextcloud_web_data/app/apps:/var/www/html/apps
+      - ./nextcloud_web_data/app/custom_apps:/var/www/html/custom_apps
+      - ./nextcloud_web_data/app/themes:/var/www/html/themes
+    ports:
+      - 80:80
+      - 8080:8080
+    environment:
+      TZ: 'America/Argentina/Buenos_Aires'
+      MYSQL_HOST: nextcloud_db
     depends_on:
-      - mariadb
-    volumes:
-      - $PWD/nextcloud:/var/www/html
-      - $PWD/app/data:/mnt/nextcloud-data
-      - $PWD/app/config:/mnt/nextcloud-config
-      - $PWD/app/apps:/var/www/html/apps
-      - $PWD/app/custom_apps:/var/www/html/custom_apps
-      - $PWD/app/themes:/var/www/html/themes
-      - /etc/localtime:/etc/localtime:ro
-    environment:
-      - MYSQL_HOST=mariadb
-    ports:
-      - "80:80"
-      - "8080:8080"
+      - nextcloud_db
     restart: unless-stopped
+    networks:
+      - nextcloud_network
 
 networks:
   nextcloud_network:

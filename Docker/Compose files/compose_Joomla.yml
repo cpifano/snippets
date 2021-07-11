@@ -1,22 +1,40 @@
 version: '3'
 services:
-  web:
+  joomla_db:
+    container_name: joomla_db_container
+    image: mysql:5.7
     volumes:
-      - $PWD/html:/var/www/html
+      - ./joomla_db_data:/var/lib/mysql
+    ports:
+      - 3306:3306
+    environment:
+      TZ: 'America/Argentina/Buenos_Aires'
+      MYSQL_ROOT_PASSWORD: my_password
+      MYSQL_USER: joomla
+      MYSQL_DATABASE: joomla
+      MYSQL_PASSWORD: joomla
+    restart: unless-stopped
+    networks:
+      - joomla_net
+
+  joomla_web:
+    container_name: joomla_web_container
     image: joomla
+    volumes:
+      - ./joomla_web_data:/var/www/html
     ports:
       - 80:80
     environment:
+      TZ: 'America/Argentina/Buenos_Aires'
       JOOMLA_DB_HOST: db
       JOOMLA_DB_PASSWORD: joomla
       JOOMLA_DB_USER: joomla
       JOOMLA_DB_NAME: joomla
-  db:
-    image: mysql:5.7
-    volumes:
-      - $PWD/data:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: example
-      MYSQL_USER: joomla
-      MYSQL_DATABASE: joomla
-      MYSQL_PASSWORD: joomla
+    depends_on:
+      - joomla_db
+    restart: unless-stopped
+    networks:
+      - joomla_net
+
+networks:
+  joomla_net:

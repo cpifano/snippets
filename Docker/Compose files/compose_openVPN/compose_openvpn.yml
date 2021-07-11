@@ -1,12 +1,14 @@
 version: '2'
 services:
   openvpn:
-    cap_add:
-     - NET_ADMIN
-    image: kylemanna/openvpn
     container_name: openvpn_container
-    ports:
-     - "1194:1194/udp"
-    restart: unless-stopped
+    image: kylemanna/openvpn
     volumes:
-     - $PWD/openvpn_data/conf:/etc/openvpn
+      - ./openvpn_data/conf:/etc/openvpn
+    ports:
+      - "1194:1194/udp"
+    environment:
+      TZ: 'America/Argentina/Buenos_Aires'
+    cap_add:
+      - NET_ADMIN
+    restart: unless-stopped

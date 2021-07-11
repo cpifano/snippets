@@ -1,24 +1,28 @@
 version: '3'
-
 services:
-  reaction:
-    image: reactioncommerce/reaction
-    networks:
-      - net
-    depends_on:
-      - mongo
-    ports:
-      - "3000:3000"
-    environment:
-      ROOT_URL: "http://localhost"
-      MONGO_URL: "mongodb://mongo:27017/reaction"
-
-  mongo:
+  reaction_commerce_db:
     image: mongo
     volumes:
-      - $PWD/data:/data/db
+      - ./reaction_commerce_db_data:/data/db
+    environment:
+      TZ: 'America/Argentina/Buenos_Aires'
+    restart: unless-stopped
     networks:
-      - net
+      - reaction_commerce_net
+
+  reaction_commerce_web:
+    image: reactioncommerce/reaction
+    ports:
+      - 3000:3000
+    environment:
+      TZ: 'America/Argentina/Buenos_Aires'
+      ROOT_URL: http://localhost
+      MONGO_URL: mongodb://mongo:27017/reaction
+    depends_on:
+      - reaction_commerce_db
+    restart: unless-stopped
+    networks:
+      - reaction_commerce_net
 
 networks:
-  net:
+  reaction_commerce_net:
