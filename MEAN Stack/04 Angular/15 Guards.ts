@@ -104,11 +104,3 @@ export class ConfirmDeactivateGuard implements CanDeactivate<CanDeactivateCompon
   }
 }
 //---------------------------------------------------------------------------------------------------------------------------//
-
-
-
-//ngx-cookie-service
-npm install ngx-cookie-service --save
-
-//JWT Interceptor:
-ng generate interceptor JwtInterceptor

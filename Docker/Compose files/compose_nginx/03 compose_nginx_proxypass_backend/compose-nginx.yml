@@ -1,0 +1,22 @@
+version: '3.5'
+
+services:
+  nginx_web:
+    container_name: nginx_web_container
+    image: nginx:alpine
+    volumes:
+      - ./nginx_web_data/conf.d:/etc/nginx/conf.d/
+      - ./nginx_web_data/site-content:/usr/share/nginx/html:ro
+      - ./nginx_web_data/ssl:/etc/ssl/
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+     - 80:80
+     - 8443:443
+    environment:
+      TZ: 'America/Argentina/Buenos_Aires'
+    restart: unless-stopped
+    networks:
+      - nginx_net
+
+networks:
+  nginx_net:

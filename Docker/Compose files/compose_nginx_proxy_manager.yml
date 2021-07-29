@@ -1,0 +1,43 @@
+version: '3.5'
+
+services:
+  npm_db:
+    container_name: npm_db_container
+    image: mysql:5.7
+    environment:
+      TZ: 'America/Argentina/Buenos_Aires'
+      MYSQL_ROOT_PASSWORD: 'root_password'
+      MYSQL_DATABASE: 'npm_database'
+      MYSQL_USER: 'npm_user'
+      MYSQL_PASSWORD: 'npm_pass'
+    volumes:
+      - ./npm_db_data:/var/lib/mysql
+    restart: unless-stopped
+    networks:
+      - npm_net
+
+  npm_web:
+    container_name: npm_web_container
+    image: 'jc21/nginx-proxy-manager:latest'
+    ports:
+      - 80:80
+      - 81:81
+      - 443:443
+    environment:
+      TZ: 'America/Argentina/Buenos_Aires'
+      DB_MYSQL_HOST: "npm_db"
+      DB_MYSQL_PORT: 3306
+      DB_MYSQL_USER: "npm_user"
+      DB_MYSQL_PASSWORD: "npm_pass"
+      DB_MYSQL_NAME: "npm_database"
+    volumes:
+      - ./npm_web_data/data:/data
+      - ./npm_web_data/letsencrypt:/etc/letsencrypt
+    depends_on:
+      - npm_db
+    restart: unless-stopped
+    networks:
+      - npm_net
+      
+networks:
+  npm_net:
