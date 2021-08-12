@@ -1,7 +1,8 @@
 //---------------------------------------------------------------------------------------------------------------------------//
-// REACTIVE X (RxJS):
+// INTRODUCCIÓN:
 //---------------------------------------------------------------------------------------------------------------------------//
-// Es una API que nos brinda funcionalidades para establecer procesamientos de funciones y datos de forma asíncrona.
+// Rx - Reactive Extensions, es un conjunto de herramientas que permiten que los lenguajes de programación operen en
+// secuencias de datos independientemente de si los datos son síncronos o asíncronos.
 //---------------------------------------------------------------------------------------------------------------------------//
 import { Component, OnInit } from '@angular/core';
 
@@ -9,11 +10,11 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-usuarios',
-  templateUrl: './usuarios.component.html',
-  styleUrls: ['./usuarios.component.css']
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class UsuariosComponent implements OnInit {
+export class AppComponent implements OnInit {
 
   //Crear mi Observable:
   obs:any;
@@ -47,26 +48,5 @@ export class UsuariosComponent implements OnInit {
     this.obs.unsuscribe();
 
   }
-}
-//---------------------------------------------------------------------------------------------------------------------------//
-
-
-//---------------------------------------------------------------------------------------------------------------------------//
-//Ejecutar una función sincrona de forma asincróna:
-//Importar módulo de Reactive X:
-import { Observable,of } from 'rxjs';
-
-//Función síncrona:
-getDatosSync(){
-  //...//
-  obs.suscribe((data) => {
-    console.log(data);
-  });
-  //...//
-}
-
-//La función getDatos es un Observable subtipo Usuarios:
-getDatos(): Observable<Usuarios>{
-  return of(DATOS);
 }
 //---------------------------------------------------------------------------------------------------------------------------//

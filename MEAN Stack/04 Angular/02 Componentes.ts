@@ -72,7 +72,7 @@ import { Component, OnInit } from '@angular/core';
   //styles: ['h1{color:red;}']
 })
 
-export class NombreComponenteComponent implements OnInit {
+export class NombreComponenteComponent implements OnInit, ngOnDestroy {
   //Defino una propiedad dentro de mi clase usuarios:
   public nombre_coleccion:string = 'nombre_coleccion';
 
@@ -91,6 +91,10 @@ export class NombreComponenteComponent implements OnInit {
     console.log('Componente inicializado con éxito.')
   }
 
+  //Método de destrución del componente:
+  ngOnDestroy(): void {
+    console.log('Componente destruido');
+  }
 }
 //-----------------------------------------------------------------------------------//
 
