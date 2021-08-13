@@ -40,7 +40,7 @@ export class AppComponent implements OnInit {
     const cuadrado = alCuadrado(nums);
 
     //Observar contenido (Suscribirse):
-    cuadrado.suscribe((data) => {
+    cuadrado.subscribe((data) => {
       //Mostrar resultados de operación al cuadrado de elementos pares:
       console.log('Resultado:' + data);
     });

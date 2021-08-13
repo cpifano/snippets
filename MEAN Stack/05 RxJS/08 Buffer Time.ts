@@ -1,10 +1,11 @@
 //---------------------------------------------------------------------------------------------------------------------------//
-// INTERVAL Y TIMER:
+// BUFFER TIME:
 //---------------------------------------------------------------------------------------------------------------------------//
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 //Importar módulo de Reactive X:
-import { interval, timer } from 'rxjs';
+import { interval } from 'rxjs';
+import { bufferTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -15,25 +16,23 @@ export class AppComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+    const timer = interval(500); //Medio segundo
 
-    //Crear un observable con interval:
-    const contador = interval(1000); //Milisegundos
-
-    //Observar contenido (Suscribirse):
-    contador.subscribe((dato) => {
-      console.log('Segundos: ' + dato);
-    });
-
-
-    //Crear un observable con timer (SetTimeOut):
-    const contador = timer(1000); //Milisegundos
+    //Buffer Time:
+    //Almacena datos hasta que se cumpla una condición.
+    //Luego nos retornará todo el resultado del golpe en un Array.
+    const buffer = timer.pipe(
+      //Va a almacenar cada dos segundos:
+      bufferTime(2000, 4000) //El buffer se emite cada 4 segundos.
+    );
 
     //Observar contenido (Suscribirse):
-    contador.subscribe((dato) => {
-      console.log(`Cada ${dato} segundos`);
-    });
+    buffer.subscribe(dato => console.log(dato));
+  }
+
+  public ngOnDestroy(): void {
+
   }
 }
-
 //---------------------------------------------------------------------------------------------------------------------------//

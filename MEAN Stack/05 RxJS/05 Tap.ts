@@ -1,10 +1,11 @@
 //---------------------------------------------------------------------------------------------------------------------------//
-// FROM EVENT:
+// TAP:
 //---------------------------------------------------------------------------------------------------------------------------//
 import { Component, OnInit } from '@angular/core';
 
-//Importar módulo de Reactive X:
+//Importar módulos de Reactive X:
 import { fromEvent } from 'rxjs';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -16,19 +17,25 @@ export class AppComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    const dom_element = document.getElementById('IDdivElemento');
-
     //Crear observable desde fromEvent:
-    const mouseMove = fromEvent(dom_element, 'mousemove');
+    //fromEvent no tiene funciones parametrales observables de Reactive X (No puedo manejar errores, o detectar complete).
+    const clicks = fromEvent(document, 'click');
+
+    //Método pipe de un observable (fromEvent):
+    //Me permite concatenar al observable otras funciones observables:
+    const positions = clicks.pipe(
+
+      //Tap: Nos permite adicionar elementos parametrados a observables no parametrados como fromEvent.
+      tap(
+        event => console.log(`Procesado: ${event}`),
+        error => console.error(`Error: ${error}`),
+        //Complete:
+        () => console.log('Proceso completo')
+      );
+    );
 
     //Observar contenido (Suscribirse):
-    mouseMove.subscribe((event: MouseEvent) => {
-      console.log(`Coordenadas X: ${event.clientX}, Y: ${event.clientY}`);
-    });
+    positions.subscribe(pos => console.log(pos));
   }
 }
-
-//Contenido del archivo app.component.html:------------------------------------------//
-<div id="IDdivElemento"></div>
-//-----------------------------------------------------------------------------------//
 //---------------------------------------------------------------------------------------------------------------------------//

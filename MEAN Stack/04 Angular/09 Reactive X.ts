@@ -34,18 +34,13 @@ export class UsuariosComponent implements OnInit {
 
   //Creo una función:
   fnRxJS(){
-
     //Suscribe:
     //Al suscribir el objeto, llama a toda su cadena de flujo:
-    this.obs.suscribe({
+    this.obs.subscribe({
       next: x => console.log('Valor: ' + x), //Obtengo los valores de retorno (1,2,3,4).
       error: err => console.error('Error inesperado: ' + err),
       complete: () => console.log('Completo');
     });
-
-    //Desuscribirse del objeto es recomentable al momento de destrución del componente (ngOnDestroy).
-    this.obs.unsuscribe();
-
   }
 }
 //---------------------------------------------------------------------------------------------------------------------------//
@@ -54,12 +49,12 @@ export class UsuariosComponent implements OnInit {
 //---------------------------------------------------------------------------------------------------------------------------//
 //Ejecutar una función sincrona de forma asincróna:
 //Importar módulo de Reactive X:
-import { Observable,of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 //Función síncrona:
 getDatosSync(){
   //...//
-  obs.suscribe((data) => {
+  obs.subscribe((data) => {
     console.log(data);
   });
   //...//
