@@ -28,11 +28,16 @@ export class AppComponent implements OnInit {
     const rango = range(1, 10); //Cuenta de 1 a 10
 
     //concat:
-    //Permite concatenar observables:
+    //Permite concatenar observables (posee un límite de hasta 100 observables).
+    //concat respeta el orden de los observables y los concatena uno al final del otro.
     const resultado = concat(timer, rango);
 
     //Observar contenido (Suscribirse):
     resultado.subscribe(data => console.log(data));
   }
 }
+
+//Merge:
+//Existe un módulo llamado merge que tembién permite mezclar los observables, pero en este caso no respeta el orden.
+//Merge une los observables cuando estos finalizan.
 //---------------------------------------------------------------------------------------------------------------------------//

@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
 
     //Observar contenido (Suscribirse):
     const subsciption_01 = shareObs.subscribe(pos => console.log(pos));
-    const subsciption_01 = shareObs.subscribe(pos => console.log(pos));
+    const subsciption_02 = shareObs.subscribe(pos => console.log(pos));
 
     //RESULTADO ESPERADO:
     // TAP ON

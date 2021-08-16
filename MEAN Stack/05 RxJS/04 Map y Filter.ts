@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
       filter((n: number) => n % 2 === 0), //Si cumple devuelve true sino false (Función modulo, elementos pares)
 
       //Map:
-      //Realiza una operacion matematica que sea muy grande como para hacerla con un observable.
+      //Mapea/Realiza una operacion logica y/o matematica que sea muy grande como para hacerla con un observable.
       map(n => n * n) //Hacer operación al cuadrado solo de los elementos pares filtrados previamente.
     );
 
