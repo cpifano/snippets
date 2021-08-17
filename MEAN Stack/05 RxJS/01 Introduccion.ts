@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
     const condicion_error: boolean = false;
 
     //Crear mi Observable:
-    const obsPrueba = Observable.create(function (observer) {
+    const obsPrueba = new Observable(observer => {
       observer.next(1); //Se puede ingresar cualquier tipo de procesamiento dentro.
       observer.next(2); //Puede que el primero demore más y los siguientes pasos requieran algún dato de este.
       observer.next(3);

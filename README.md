@@ -15,7 +15,7 @@ Este repositorio posee **[snippets](https://es.wikipedia.org/wiki/Snippet)** de 
 * [**Git**](https://github.com/cpifano/snippets/tree/master/Git)
 * [**Python**](https://github.com/cpifano/snippets/tree/master/Python/01%20Introducci%C3%B3n%20Python%203) & [**Django Python**](https://github.com/cpifano/snippets/tree/master/Python/02%20Django)
 * [**Rust**](https://github.com/cpifano/snippets/tree/master/Rust)
-* [**MEAN Stack**](https://github.com/cpifano/snippets/tree/master/MEAN%20Stack) | `Javascript` `NodeJS` `TypeScript` `Angular` 
+* [**MEAN Stack**](https://github.com/cpifano/snippets/tree/master/MEAN%20Stack) | `Javascript` `NodeJS` `TypeScript` `Angular` `RxJS`
 * [**LAMP Stack**](https://github.com/cpifano/snippets/tree/master/LAMP%20Stack) | `HTML` `CSS` `HTML5` `Javascript` `jQuery` `PHP` | **Deprecado**
 
 
