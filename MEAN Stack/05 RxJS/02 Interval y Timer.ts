@@ -1,39 +1,23 @@
 //---------------------------------------------------------------------------------------------------------------------------//
 // INTERVAL Y TIMER:
 //---------------------------------------------------------------------------------------------------------------------------//
-import { Component, OnInit } from '@angular/core';
-
 //Importar módulo de Reactive X:
 import { interval, timer } from 'rxjs';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent implements OnInit {
+//Interval:
+//Crea un observable que entrega un valor cada cierto intervalo de tiempo.
+const contador = interval(1000); //Milisegundos
 
-  constructor() {}
+//Observar contenido (Suscribirse):
+contador.subscribe((dato) => {
+  console.log('Segundos: ' + dato);
+});
 
-  ngOnInit(): void {
+//Crear un observable con timer (SetTimeOut):
+const contador = timer(1000); //Milisegundos
 
-    //Crear un observable con interval:
-    const contador = interval(1000); //Milisegundos
-
-    //Observar contenido (Suscribirse):
-    contador.subscribe((dato) => {
-      console.log('Segundos: ' + dato);
-    });
-
-
-    //Crear un observable con timer (SetTimeOut):
-    const contador = timer(1000); //Milisegundos
-
-    //Observar contenido (Suscribirse):
-    contador.subscribe((dato) => {
-      console.log(`Cada ${dato} segundos`);
-    });
-  }
-}
-
+//Observar contenido (Suscribirse):
+contador.subscribe((dato) => {
+  console.log(`Cada ${dato} segundos`);
+});
 //---------------------------------------------------------------------------------------------------------------------------//

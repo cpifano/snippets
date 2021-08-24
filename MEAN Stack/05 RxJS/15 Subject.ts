@@ -1,46 +1,27 @@
 //---------------------------------------------------------------------------------------------------------------------------//
 // SUBJECT:
 //---------------------------------------------------------------------------------------------------------------------------//
-import { Component, OnInit, OnDestroy } from '@angular/core';
-
 //Importar módulo de Reactive X:
 import { Subject } from 'rxjs';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent implements OnInit {
+//Subject:
+//Es una especie de observable que puede poseer multiples suscripciones.
+//Puede ser muy útil cuando tenemos un solo observable del cual queremos hacer muchas ramificaciones de datos.
+const objSubject = new Subject;
 
-  constructor() {}
+//Si solo va a recibir valores de un tipo (numérico):
+const objSubject = new Subject<number>();
 
-  public ngOnInit(): void {
+//Crear suscripciones (comportamiento):
+objSubject.subscribe({
+  next: (dato) => console.log('Observable A: ' + dato),
+});
 
-    //Subject:
-    //Es una especie de observable que puede poseer multiples suscripciones.
-    //Puede ser muy útil cuando tenemos un solo observable del cual queremos hacer muchas ramificaciones de datos.
-    const objSubject = new Subject;
+objSubject.subscribe({
+  next: (dato) => console.log('Observable B: ' + dato),
+});
 
-    //Si solo va a recibir valores de un tipo (numérico):
-    const objSubject = new Subject<number>();
-
-    //Crear suscripciones (comportamiento):
-    objSubject.subscribe({
-      next: (dato) => console.log('Observable A: ' + dato),
-    });
-
-    objSubject.subscribe({
-      next: (dato) => console.log('Observable B: ' + dato),
-    });
-
-    //Envíar observables (Enviar datos a mis suscripciones):
-    objSubject.next(1);
-    objSubject.next(2);
-  }
-
-  public ngOnDestroy(): void {
-
-  }
-}
+//Envíar observables (Enviar datos a mis suscripciones):
+objSubject.next(1);
+objSubject.next(2);
 //---------------------------------------------------------------------------------------------------------------------------//

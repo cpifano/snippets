@@ -32,10 +32,10 @@ export class AppComponent implements OnInit {
     //Obtener resultados de multiples suscripciones en PARALELO:
     //Es decir, avanzan todas a la vez.
     //forkJoin nos retornará un Array con los resultados en el orden ingresado.
-    forkJoin(
-      this.obs.getGitHub('cpifano'),
-      this.obs.getGitHub('elacuesta'),
-    ).subscribe(
+    forkJoin([
+        this.obs.getGitHub('cpifano'),
+        this.obs.getGitHub('elacuesta')
+    ]).subscribe(
       (res) => {
         console.log(res);
       }

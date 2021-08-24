@@ -1,49 +1,48 @@
 //---------------------------------------------------------------------------------------------------------------------------//
-// MAP y FILTER:
+// OPERATORS:
 //---------------------------------------------------------------------------------------------------------------------------//
-import { Component, OnInit } from '@angular/core';
+// Los operadores son funcionalidades inmutables las cuales nos permiten modificar el comportamiento y/o los datos procesados
+// por un observable.
+//---------------------------------------------------------------------------------------------------------------------------//
 
+
+//---------------------------------------------------------------------------------------------------------------------------//
+// OPERADOR MAP Y FILTER:
+//---------------------------------------------------------------------------------------------------------------------------//
+// Nos permite procesar/modificar datos de un observable y retornar el dato procesado/modificado a la siguiente operación.
+//---------------------------------------------------------------------------------------------------------------------------//
 //Importar módulos de Reactive X:
 import { pipe, of } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-export class AppComponent implements OnInit {
+//Función of:
+//Crea un observable a partir de una lista de elementos.
+const obsNumeros = of(1, 2, 3, 4, 5);
 
-  constructor() {}
+//Función pipe:
+//Permite agregar una cantidad X de operadores y/o funciones a un observable.
+obsNumeros.pipe(
+  //Map:
+  //Nos permite procesar/modificar datos de un observable y retornar el dato procesado/modificado a la siguiente operación.
+  map(valor => { return valor * 10; }),
 
-  ngOnInit(): void {
+  //La siguiente operacion recibirá los valores del map anterior (10, 20, 30, 40, 50):
+  map(segundo_valor => { return valor / 2; }),
 
-    //Of:
-    //Crea una lista de elementos.
-    const nums = of(1, 2, 3, 4, 5);
+  //Filter:
+  //Permite filtrar elementos.
+  //Si cumple una condición envía el dato al siguiente operador sino no envía nada.
+  //Esta operación recibe los valores del map anterior (5, 10, 15, 20, 25).
+  filter((tercer_valor: number) => tercer_valor % 2 === 0), //Función modulo para filtrar elementos pares.
+);
 
+//Observar contenido (Suscribirse):
+obsNumeros.subscribe((data) => {
+  //Mostrar resultados de operación al cuadrado de elementos pares:
+  console.log('Valor: ' + data);
+});
 
-    //Crear observable desde la funcion pipe:
-    //pipe: Fusiona una x cantidad de funciones de observables.
-    const alCuadrado = pipe(
-      //Funciones:
-
-      //Filter: Filtra elementos.
-      filter((n: number) => n % 2 === 0), //Si cumple devuelve true sino false (Función modulo, elementos pares)
-
-      //Map:
-      //Mapea/Realiza una operacion logica y/o matematica tomando el valor de entrada del observable.
-      map(n => n * n) //Hacer operación al cuadrado solo de los elementos pares filtrados previamente.
-    );
-
-    //Crear elemento observable:
-    const cuadrado = alCuadrado(nums);
-
-    //Observar contenido (Suscribirse):
-    cuadrado.subscribe((data) => {
-      //Mostrar resultados de operación al cuadrado de elementos pares:
-      console.log('Resultado:' + data);
-    });
-  }
-}
+//Resultado esperado:
+// Valor: 10
+// Valor: 20
 //---------------------------------------------------------------------------------------------------------------------------//
