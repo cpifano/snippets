@@ -33,6 +33,31 @@ class reloj_sumergible implements ISumergible {
 
 
 //---------------------------------------------------------------------------------------------------------------------------//
+// OPERADOR DE INTERSECCIÓN (&):
+//---------------------------------------------------------------------------------------------------------------------------//
+// El operador de intersección nos perite la union de tipos de datos.
+// Para el caso de variables o constantes de un valór único no tiene una implementación real ya que no podemos unir un tipo
+// de dato y que sea ambos a la vez (Ej: number y string). En este caso nos infiere que el tipo es never y carecerá de
+// utilidad. Pero el operador de intersección presenta gran utilidad en la definicion de interfaces.
+//---------------------------------------------------------------------------------------------------------------------------//
+interface IUsuario {
+  username: string,
+  status: boolean
+}
+
+interface IAlumno {
+  id: number
+}
+
+let alumno: IUsuario & IAlumno = {
+  username: 'cpifano',
+  status: true,
+  id: 1001
+}
+//---------------------------------------------------------------------------------------------------------------------------//
+
+
+//---------------------------------------------------------------------------------------------------------------------------//
 // ITERFACES PARA ESTABLECER TIPOS DE DATOS NO COMPLEJOS:
 //---------------------------------------------------------------------------------------------------------------------------//
 //Crear tipo de dato:

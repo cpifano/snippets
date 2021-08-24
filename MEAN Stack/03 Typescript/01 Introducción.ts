@@ -31,7 +31,12 @@
 let cadena: string = "Hola mundo!";
 let numero: number = 28;
 let booleano: boolean = false;
-let variable: any = "Admite todo tipo de dato";
+let todo_tipo: any = "Admite todo tipo de dato";
+let desconocido: unknown;
+
+//Union de tipos (admitirá ambos tipos):
+let mes: number | string = 'Mayo';
+mes = 5;
 
 //Advertencia por contenido no tipado:
 cadena = 32; //Retornará una advertencia, pero en JS funcionará sin inconvenientes.
@@ -46,17 +51,20 @@ document.write(numero.toString());
 let string_array = ['', '', '']; //Definido de forma implícita.
 string_array = [1,2,3]; //Advertencia de assignación
 
-let multi_array:any[] = ['', '', '']; //Definido de forma explícita.
+let string_array: string[] = ['a', 'b', 'c']; //Definido de forma explícita.
+
+let multi_array: any[] = ['', '', '']; //Definido de forma explícita.
 multi_array = [1,2,3];
 
 //Tuplas:
 //Son inmutables y evitan la creación de nuevos tipos.
-let tupla_strnum:[string,number];
+let tupla_strnum: [string,number];
 tupla_strnum = ['Hola', 44];
 
 //Void, Undefined, Null:
-let vacio:void = undefined;
-let nulo:null = null;
+let vacio: void;
+let sin_definir: undefined = undefined;
+let nulo: null = null;
 
 //Typeof nos retornará el tipo de dato que contiene una variable:
 console.log(typeof(vacio));
