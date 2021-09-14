@@ -4,10 +4,14 @@
 <!--ngFor-->
 <!-- Listar un elemento definido (me permite repetir una estructura)-->
 <ul>
-  <li *ngFor="let actual of propiedades; index as clave" >
+  <li *ngFor="let actual of propiedades" >
     {{ actual.nombre }}
   </li>
 </ul>
+
+<div *ngFor="let item of objPropiedades | keyvalue">
+    Clave: {{ item.key }} - Valor: {{ item.value }}
+</div>
 
 <!--ngFor sobre un Observable (ver Reactive RxJS)-->
 <ul>
