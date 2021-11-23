@@ -19,6 +19,19 @@ const routes: Routes = [
     path: 'nombre-path-3',
     component: NombreComponente,
     data: { title: 'Titulo para componente' } //Se pueden pasar arrays de información en el ruteo (Activated Route).
+  },
+
+  //Definir sub-rutas:
+  {path: '',[
+    {path: 'login', component: LoginComponent},
+    {path: 'register', component: RegisterComponent},
+    {path: '**', redirectTo: '/'}
+  ]},
+
+  //Registrar sub-rutas de un módulo en particular:
+  {
+    path: 'auth',
+    loadChildren: () => import('./ruta-modulo/auth.module').then( module => module.AuthModule)
   }
 ];
 

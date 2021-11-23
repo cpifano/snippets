@@ -8,6 +8,11 @@
 //---------------------------------------------------------------------------------------------------------------------------//
 //Crear un nuevo módulo:
 ng generate module usuarios
+
+//--module: app indica que se agrege este módulo al app.module.
+//--flat: indica que no debe crear un directorio junto con el módulo.
+//--routing: creará un módulo de ruteo para éste modulo.
+ng generate module usuarios --module app --flat --routing
 //---------------------------------------------------------------------------------------------------------------------------//
 
 //---------------------------------------------------------------------------------------------------------------------------//
