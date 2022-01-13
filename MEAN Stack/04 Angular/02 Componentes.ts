@@ -47,13 +47,14 @@ export class AppComponent {
 // COMPONENTE CREADO POR EL PROGRAMADOR:
 //---------------------------------------------------------------------------------------------------------------------------//
 //Crear un nuevo componente desde nuestra terminal (Dentro del directorio de nuestra app):
+//--export: podemos agregar este parametro para que el modulo que contenga este componente lo ponga dentro de sus exports.
 ng generate component nombrecomponente
 
 //Al crear un componente se creará un directorio con los archivos que integran al mismo.
 /nombre_componente
   |--> nombrecomponente.component.css      //Estilos para aplicar a nuestro template de vista de componente.
   |--> nombrecomponente.component.html     //Template de vista del componente.
-  |--> nombrecomponente.component.spec.ts
+  |--> nombrecomponente.component.spec.ts  //Archivo para casos de test (--skip-test para evitar su creación automática).
   |--> nombrecomponente.component.ts       //Código del componente propiamente dicho.
 
 
