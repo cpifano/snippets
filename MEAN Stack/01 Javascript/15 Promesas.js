@@ -13,7 +13,7 @@ let x = 10;
 //Crear una promesa:
 const promesa = new Promise((resolve, reject) => {
   //Validar la promesa
-  if(x ==1 0){
+  if(x == 10){
     //Retorno en caso de éxito:
     resolve("La variable es igual a 10.");
   } else {
