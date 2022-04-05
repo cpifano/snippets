@@ -2,17 +2,15 @@
 // LOOKUP -> AGGREGATE:
 //---------------------------------------------------------------------------------------------------------------------------//
 // Lookup solo se puede utilizar dentro de una agregación.
-// Solo se puede usar para extraer documentos de referencia de colecciones no fragmentadas.
-// Puede extraer documentos referenciados por cualquier campo generalmente más eficaz ya que es una operación del lado del
-// servidor.
+// Ventaja principal: la operación se lleva a cabo dentro del servidor de bases de datos, ya que se trata de una consulta.
 //---------------------------------------------------------------------------------------------------------------------------//
 const resultado = await users.aggregate(
   [
     {
       $lookup: {
-        from: 'users',                // Modelo de origen.
-        localField: 'fk_people',      // Nombre del campo LOCAL de referencia (FK).
-        foreignField: '_id',          // Nombre del campo EXTERNO de referencia (FK).
+        from: 'people',               // Modelo que contiene los datos para el join.
+        localField: 'fk_people',      // Nombre de la clave LOCAL de referencia (FK).
+        foreignField: '_id',          // Nombre de la clave EXTERNA de referencia (FK).
         as: 'people_data',            // Nombre (alias) del campo donde se arrojará el resultado del join.
       },
       { $unwind: '$people_data'},     // Desenvolver el campo para que no esté dentro de un array.
@@ -32,11 +30,9 @@ const resultado = await users.aggregate(
 //---------------------------------------------------------------------------------------------------------------------------//
 // POPULATE:
 //---------------------------------------------------------------------------------------------------------------------------//
-// Alternativa en Mongoose que reemplaza automáticamente la ruta especificada (ID de esquema) en el documento, con un
-// documento de un modelo diferente.
 // Populate puede utilizarse tanto con agregaciones como con funciones de busqueda.
-// Se puede usar para extraer documentos de referencia de colecciones fragmentadas y no fragmentadas.
 // Solo puede extraer documentos referenciados por _id.
+// Desventaja principal: Populate realiza "múltiples consultas" para "emular" un join.
 //---------------------------------------------------------------------------------------------------------------------------//
 const usersSchema = new Schema({
   username: { type: String, required: true },
@@ -46,14 +42,18 @@ const usersSchema = new Schema({
 const peopleSchema = new Schema({
   name: { type: String, required: true },
   surname: { type: String, required: true },
+  fk_user: { type: mongoose.Types.ObjectId, required: true, ref: 'users' } //Declaramos la colección de referencia.
 });
 
 const users = model('users', usersSchema);
 const people = model('people', peopleSchema);
 
 //Poblar:
-const resultado = await users.find().populate(path: 'people_data', model: 'people');
+const resultado = await users.find().populate('people');
 
-// o
-const resultado = await users.find().populate('people_data');
+//Otras formas de poblar:
+populate({
+    path: 'people',
+    match: { age: { $gte: 21 } }
+})
 //---------------------------------------------------------------------------------------------------------------------------//
