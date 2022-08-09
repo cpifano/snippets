@@ -8,11 +8,32 @@ docker cp nombre_container:/directorio/archivo /path_destino
 #---------------------------------------------------------------------------------------------------------------------------#
 # MYSQL DUMP:
 #---------------------------------------------------------------------------------------------------------------------------#
-#Backup
+#Backup:
 docker exec IDContenedor/NombreContenedor bash -c "mysql -u root --password=root NombreBD" > BackupBD.sql
 
-#Restore
+#Restore:
 cat BackupBD.sql | docker exec IDContenedor/NombreContenedor bash -c "mysql -u root --password=root NombreBD"
+#---------------------------------------------------------------------------------------------------------------------------#
+
+
+#---------------------------------------------------------------------------------------------------------------------------#
+# MONGODB DUMP:
+#---------------------------------------------------------------------------------------------------------------------------#
+#Backup:
+#No Auth:
+docker exec NOMBRECONTENEDOR sh -c 'mongodump --archive' > nombre_archivo.dump
+
+#Authenticated:
+docker exec NOMBRECONTENEDOR sh -c 'mongodump --authenticationDatabase admin -u USUARIO -p PASSWORD --db NOMBRE_DB --archive' > nombre_archivo.dump
+
+
+
+#Restore:
+#No Auth:
+docker exec -i NOMBRECONTENEDOR sh -c 'mongorestore --archive' < nombre_archivo.dump
+
+#Authenticated:
+docker exec -i NOMBRECONTENEDOR sh -c 'mongorestore --authenticationDatabase admin -u USUARIO -p PASSWORD --db NOMBRE_DB --archive' < db.dump
 #---------------------------------------------------------------------------------------------------------------------------#
 
 
