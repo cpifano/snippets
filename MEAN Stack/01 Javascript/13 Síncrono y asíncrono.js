@@ -34,7 +34,7 @@
 
   function uno(){
     setTimeout(() => {
-      console.log("Dos");
+      console.log("Uno");
     }, 0);
 
     dos();
