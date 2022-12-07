@@ -14,7 +14,7 @@ async function main() {
     secure: false, // true for 465, false for other ports.
     auth: {
       user: 'camilo@siriusris.com',
-      pass: 'weRyQheTyC6micySFU-xoQ',
+      pass: 'hashed_password',
     },
     tls: {
         rejectUnauthorized: false
