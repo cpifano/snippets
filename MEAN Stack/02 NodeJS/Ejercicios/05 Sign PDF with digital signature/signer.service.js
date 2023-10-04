@@ -34,7 +34,7 @@ async function signPDF (pdfBuffer, p12Buffer, passphrase) {
         SubFilter: 'adbe.pkcs7.detached',
         ByteRange,
         Contents: PDFHexString.of('A'.repeat(SIGNATURE_LENGTH)),
-        Reason: PDFString.of('We need your signature for reasons...'),
+        Reason: PDFString.of('Internal Approval'), //This type of information is required in some work processes (eg: Title 21 CFR part 11).
         M: PDFString.fromDate(new Date()),
     });
     const signatureDictRef = pdfDoc.context.register(signatureDict);
