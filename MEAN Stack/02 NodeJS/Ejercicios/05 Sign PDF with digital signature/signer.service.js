@@ -13,7 +13,7 @@ const {
 
 // This length can be derived from the following `node-signpdf` error message:
 // ./node_modules/node-signpdf/dist/signpdf.js:155:19
-const SIGNATURE_LENGTH = 3322;
+const SIGNATURE_LENGTH = 4628;
 
 //--------------------------------------------------------------------------------------------------------------------//
 // SIGN PDF:
