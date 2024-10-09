@@ -1,0 +1,17 @@
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:arm64v8-latest
+    container_name: plexpi
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - VERSION=docker
+      - PLEX_CLAIM= #<CLAIM-CODE> | https://www.plex.tv/claim
+    volumes:
+      - ./config:/config
+      - ./music:/music
+      - ./movies:/movies
+      - ./series:/series
+    restart: unless-stopped
