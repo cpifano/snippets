@@ -1,0 +1,31 @@
+services:
+  nextcloud_db:
+    container_name: nextcloud_db
+    image: mariadb:10.6
+    env_file: ./docker-compose.env
+    command: --transaction-isolation=READ-COMMITTED --log-bin=binlog --binlog-format=ROW
+    volumes:
+      - ./database:/var/lib/mysql
+    ports:
+      - 3306:3306
+    restart: unless-stopped
+    networks:
+      - nextcloud_net
+
+  nextcloud_app:
+    container_name: nextcloud_app
+    image: nextcloud
+    env_file: ./docker-compose.env
+    volumes:
+      - ./data:/var/www/html/data
+    ports:
+      - 8080:80
+    depends_on:
+      - nextcloud_db
+    restart: unless-stopped
+    networks:
+      - nextcloud_net
+
+networks:
+  nextcloud_net:
+    name: nextcloud_net
